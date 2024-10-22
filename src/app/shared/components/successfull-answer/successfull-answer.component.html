@@ -1,0 +1,20 @@
+<app-headermenu></app-headermenu>
+
+  <body style="background-color: #41a950 !important; height: 610px">
+    <mat-card class="card">
+      <div>
+        <p class="p">پاسخ های شما ثبت گردید ✅</p>
+        <div class="div">
+          <button
+            class="btn button bg-white col-10"
+            type="button"
+            mat-raised-button
+          >
+            <a [routerLink]="['/surveyReadOnly', code]" style="color: black"
+              >مشاهده پاسخ های شما</a
+            >
+          </button>
+        </div>
+      </div>
+    </mat-card>
+  </body>

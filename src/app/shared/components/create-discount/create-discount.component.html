@@ -1,0 +1,145 @@
+<app-headermenu></app-headermenu>
+<mat-card class="card">
+      <form [formGroup]="form" autocomplete="off">
+        <mat-form-field>
+          <input
+            #event
+            (keyup)="keyup1(event.value)"
+            matInput
+            placeholder="نام رویداد جدید"
+            maxlength="100"
+            [required]="true"
+          />
+        </mat-form-field>
+        <div *ngIf="errorMessage1 != null">
+          {{ errorMessage1 }}
+        </div>
+        <div style="padding-top: 1rem; text-align: left" class="button-row">
+          <button
+            style="border-radius: 5px;background-color: #ff6e31;color: white;"
+            class="btn"
+            (click)="onSubmit1()"
+            mat-raised-button
+          >
+            <span>افزودن رویداد</span>
+          </button>
+        </div>
+
+        <mat-form-field>
+          <input
+            #dType
+            (keyup)="keyup2(dType.value)"
+            matInput
+            placeholder="نوع تخفیف جدید"
+            maxlength="100"
+            [required]="true"
+          />
+        </mat-form-field>
+        <div *ngIf="errorMessage2 != null">
+          {{ errorMessage2 }}
+        </div>
+
+        <div style="padding-top: 1rem; text-align: left;margin-bottom: 2rem;" class="button-row">
+          <button
+            style="border-radius: 5px;background-color: #ff6e31;color: white;"
+            class="btn"
+            (click)="onSubmit2()"
+            mat-raised-button
+          >
+            <span>افزودن نوع تخفیف</span>
+          </button>
+        </div>
+
+        <mat-form-field>
+          <mat-label>انتخاب نام رویداد</mat-label>
+          <mat-select
+            name="events"
+            [required]="true"
+            (selectionChange)="eventsChange($event.value)"
+          >
+            <mat-option *ngFor="let e of events" [value]="e.name">
+              {{ e.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>انتخاب نوع تخفیف</mat-label>
+          <mat-select
+            name="dType"
+            [required]="true"
+            (selectionChange)="dTypeChange($event.value)"
+          >
+            <mat-option *ngFor="let d of dTypes" [value]="d.name">
+              {{ d.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>انتخاب پکیج</mat-label>
+          <mat-select
+            name="package"
+            [required]="true"
+            (selectionChange)="packageChange($event.value)"
+          >
+            <mat-option
+              *ngFor="let p of packagePrices; let i = index"
+              [value]="p._id"
+            >
+              {{ packageNames[i] }}
+              {{ p.duration }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <ng-persian-datepicker>
+            <p>تاریخ شروع</p>
+          <input style="padding: 1rem;padding-right: 1.3rem;width: 100%;height: 35px;border-style: solid;border-color: rgb(223 223 223);border-radius: 5px;"
+           formControlName="start"
+          />
+        </ng-persian-datepicker>
+        </div>
+        <div class="mt-2">
+        <ng-persian-datepicker>
+          <p>تاریخ پایان</p>
+        <input style="padding: 1rem;padding-right: 1.3rem;width: 100%;height: 35px;border-style: solid;border-color: rgb(223 223 223);border-radius: 5px;"
+         formControlName="end"
+        />
+      </ng-persian-datepicker>
+    </div>
+
+        <mat-form-field style="margin-top: 1rem;">
+          <input
+            type="number"
+            formControlName="userCounts"
+            matInput
+            placeholder="تعداد کاربران "
+            [required]="true"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="number"
+            formControlName="percentage"
+            matInput
+            placeholder="درصد تخفیف"
+            [required]="true"
+          />
+        </mat-form-field>
+
+        <div style="padding-top: 1rem" class="button-row">
+          <button
+            style="width: 100%; border-radius: 5px;background-color: #000080;color: white;"
+            class="btn"
+            type="submit"
+            (click)="onSubmit3()"
+            mat-raised-button
+            [disabled]="!form.valid"
+          >
+            <span>ایجاد تخفیف</span>
+          </button>
+        </div>
+      </form>
+    </mat-card>

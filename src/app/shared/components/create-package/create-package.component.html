@@ -1,0 +1,99 @@
+    <app-headermenu></app-headermenu>
+    <mat-card class="card">
+      <form [formGroup]="form" autocomplete="off">
+        <mat-form-field>
+          <input
+            #name
+            (keyup)="keyup(name.value)"
+            matInput
+            placeholder="نام پکیج جدید"
+            maxlength="100"
+            [required]="true"
+          />
+        </mat-form-field>
+        <div *ngIf="errorMessage != null">
+          {{ errorMessage }}
+        </div>
+
+        <div style="padding-top: 1rem; text-align: left;margin-bottom: 2rem;" class="button-row">
+          <button
+            style="border-radius: 5px;background-color: #ff6e31;color: white;"
+            class="btn"
+            (click)="onSubmit1()"
+            mat-raised-button
+          >
+            <span>افزودن نام پکیج</span>
+          </button>
+        </div>
+
+        <mat-form-field>
+          <mat-label>انتخاب نام پکیج</mat-label>
+          <mat-select
+            name="names"
+            [required]="true"
+            (selectionChange)="namesChange($event.value)"
+          >
+            <mat-option *ngFor="let pn of packageNames" [value]="pn.name">
+              {{ pn.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>مدت زمان</mat-label>
+          <mat-select
+            name="duration"
+            [required]="true"
+            (selectionChange)="durationChange($event.value)"
+          >
+            <mat-option *ngFor="let d of durations" [value]="d">
+              {{ d }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="number"
+            formControlName="packagePrice"
+            matInput
+            placeholder="قیمت "
+            [required]="true"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="number"
+            formControlName="packageUsers"
+            matInput
+            placeholder="تعداد کاربران "
+            [required]="true"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="number"
+            formControlName="packageForms"
+            matInput
+            placeholder="تعداد فرم ها"
+            [required]="true"
+          />
+        </mat-form-field>
+        <div style="padding-top: 1rem" class="button-row">
+          <button
+            style="width: 100%; border-radius: 5px;background-color: #000080;color: white;margin-top: 2rem;"
+            class="btn btn-success"
+            type="submit"
+            (click)="onSubmit2()"
+            mat-raised-button
+            [disabled]="!form.valid"
+          >
+            <span>ایجاد پکیج</span>
+          </button>
+        </div>
+      </form>
+    </mat-card>
+
+

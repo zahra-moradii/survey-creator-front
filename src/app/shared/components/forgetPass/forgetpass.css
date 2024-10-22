@@ -1,0 +1,13 @@
+.button {
+  font-size: 12px;
+  background-color: #ffffff;
+  border: none;
+  color: #000080;
+}
+
+.button:focus {
+  outline: none;
+}
+.m-o{
+  color: orangered;
+}

@@ -1,0 +1,28 @@
+.card {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.header {
+  padding-right: 1rem;
+  font-weight: bolder;
+  font-size: 22px;
+}
+.icon {
+  transform: scale(1.5);
+}
+
+.p1 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 2rem;
+  display: inline-block;
+}
+.button {
+  display: inline-block;
+}
+
+.expandable-content {
+  overflow: hidden;
+}

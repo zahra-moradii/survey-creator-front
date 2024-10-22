@@ -1,0 +1,85 @@
+<app-headermenu></app-headermenu>
+
+<mat-card class="card">
+  <div>
+    <p class="p1">ایجاد تخفیف جدید</p>
+    <button mat-button class="button" [routerLink]="['/AdminPanel/DiscountManager/CreateDiscount']">
+      <mat-icon style="background-color: #000080;color: white;border-radius: 100px;">add</mat-icon>
+    </button>
+  </div>
+</mat-card>
+<ol style="list-style: none; padding-right: 0px">
+  <li
+      style="padding-bottom: 1rem; list-style: none"
+      *ngFor="let discount of discounts; let i = index"
+    >
+    <mat-accordion class="example-headers-align" multi>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header style="height: 100px">
+          <mat-panel-title>
+            <div>
+              <p>
+                نام رویداد :
+               {{ eventNames[i] }}
+              </p>
+              <p>
+                نوع تخفیف :
+                {{ discountTypeNames[i] }}
+              </p>
+              <p>
+                نام پکیج :
+               {{ packageNames[i] }}
+              {{ packagePriceNames[i] }}
+              </p>
+            </div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div>
+          <p>
+            تاریخ شروع :
+            {{ startDates[i] }}
+          </p>
+          <p>
+            تاریخ پایان :
+           {{ endDates[i] }}
+          </p>
+          <p>
+            تعداد کاربران :
+            {{ discount.userCount }}
+          </p>
+          <p>
+            درصد تخفیف :
+           {{ discount.percent }} %
+          </p>
+        </div>
+
+        <div style="display: flex; margin-right: 13rem">
+          <div>
+            <button
+              style="
+                background-color: transparent;
+                border: none;
+              "
+              mat-button (click)="onEdit(discount._id)"
+            >
+              <mat-icon> edit </mat-icon>
+            </button>
+          </div>
+
+          <div style="margin-right: 1rem">
+            <button
+              style="
+                background-color: transparent;
+                border: none;
+              "
+              (click)="onDelete(discount._id)"
+            >
+              <mat-icon> delete </mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </li>
+</ol>

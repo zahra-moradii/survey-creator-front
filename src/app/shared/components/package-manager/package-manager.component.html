@@ -1,0 +1,84 @@
+<app-headermenu></app-headermenu>
+
+<mat-card class="card">
+  <div>
+    <p class="p1">ایجاد پکیج جدید</p>
+    <button
+      mat-button
+      class="button"
+      [routerLink]="['/AdminPanel/PackageManager/CreatePackage']"
+    >
+      <mat-icon style="background-color: #000080;color: white;border-radius: 100px;">add</mat-icon>
+    </button>
+  </div>
+</mat-card>
+<ol style="list-style: none; padding-right: 0px">
+  <li
+    style="padding-bottom: 1rem"
+    *ngFor="let packagePrice of packagePrices; let i = index"
+  >
+    <mat-accordion class="example-headers-align" multi>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header style="height: 100px">
+          <mat-panel-title>
+            <div>
+              <p>
+                نام پکیج :
+                <strong>{{ packageNames[i] }}</strong>
+              </p>
+              <p>
+                مدت زمان :
+                <strong>{{ packagePrice.duration }}</strong>
+              </p>
+            </div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div>
+          <p>
+            قیمت :
+            <strong>{{ packagePrice.price }} هزار تومان</strong>
+          </p>
+          <p>
+            تعداد کاربر(ها) :
+            <strong>{{ packagePrice.users }}</strong>
+          </p>
+          <p>
+            تعداد فرم (ها) :
+            <strong>{{ packagePrice.forms }}</strong>
+          </p>
+        </div>
+
+        <div style="display: flex; margin-right: 13rem">
+          <div>
+            <button
+              style="
+                background-color: transparent;
+                border: none;
+                padding-top: 0.5rem;
+                padding-right: 1rem;
+              "
+              (click)="onEdit(packagePrice._id)"
+            >
+              <mat-icon> edit </mat-icon>
+            </button>
+          </div>
+
+          <div style="margin-right: 1rem">
+            <button
+              style="
+                background-color: transparent;
+                border: none;
+                padding-top: 0.5rem;
+                padding-right: 1rem;
+              "
+              (click)="onDelete(packagePrice._id)"
+            >
+              <mat-icon> delete </mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </li>
+</ol>

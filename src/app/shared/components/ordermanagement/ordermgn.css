@@ -1,0 +1,44 @@
+.tire{
+  background-color: #000080;
+  border: none;
+  color: white;
+}
+.tire:hover{
+  color: white;
+  background-color: #000080;
+}
+.button-next {
+  font-size: 14px;
+  background-color: #000080;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 20px;
+  width: 100px;
+  height: 40px;
+  margin-left: 1rem;
+}
+
+.button-next:focus {
+  outline: none;
+}
+
+.button-back {
+  font-size: 14px;
+  background-color: rgb(133, 133, 133);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 20px;
+  width: 100px;
+  height: 40px;
+}
+
+.button-back:focus {
+  outline: none;
+}
+input::placeholder {
+  font-size: 11.5px;
+  margin-top: 10px;
+
+}

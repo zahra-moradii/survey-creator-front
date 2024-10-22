@@ -1,0 +1,221 @@
+<app-headermenu></app-headermenu>
+
+
+<mat-card style="background-color: transparent;box-shadow: none;">
+
+
+
+      <div class="">
+
+        <ol style="list-style: none; padding-right: 0px">
+          <li
+          *ngFor="let order of selectedOrders let i=index"
+          style="list-style: none ; margin-bottom: 5px;"
+        >
+            <mat-accordion class="example-headers-align" multi>
+              <mat-expansion-panel style="border-radius: 0px;">
+                <mat-expansion-panel-header style="height: 100px">
+                  <mat-panel-title>
+                    <div>
+                      <p>نام کاربری : </p>
+
+                <span style="font-size: 16px;"> {{ orders[i].user.userName}} </span>
+                    </div>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <div>
+                  <div style="display: flex;" *ngIf="orders[i].user.firstName">
+                    <p>نام : </p>
+                    <p> {{ order.user.firstName}} </p>
+                  </div>
+
+                  <div style="display: flex;" *ngIf="orders[i].user.lastName">
+                    <p>نام خانوادگی : </p>
+                    <p> {{order.user.lastName}} </p>
+                  </div>
+
+                  <div style="display: flex;">
+                    <p>تلفن : </p>
+                    <p> {{order.user.phone}} </p>
+                  </div>
+
+                  <div style="display: flex;">
+                    <p>پکیج : </p>
+                    <p> {{order.packageprice.duration}} </p>
+                  </div>
+
+                  <div style="display: flex;">
+                    <p>مبلغ : </p>
+                    <p> {{order.packageprice.price}} {{'ریال'}} </p>
+                  </div>
+
+                  <div style="display: flex;">
+                    <p>تعداد فرم‌ها : </p>
+                    <p> {{order.packageprice.forms}} </p>
+                  </div>
+
+                  <div style="display: flex;">
+                    <p>تعداد کاربران : </p>
+                    <p> {{order.packageprice.users}} </p>
+                  </div>
+
+                  <div style="display: flex;">
+                    <p>تخفیف : </p>
+                    <p> {{order.discount ? order.discount.percent : 0}} {{'درصد'}} </p>
+                  </div>
+
+                  <div style="display: flex;">
+                    <p>قیمت کلی : </p>
+                    <p> {{order.totalprice}} {{'ریال'}} </p>
+                  </div>
+
+                  <div style="display: flex;">
+                    <p>شناسه بانکی : </p>
+                    <p> {{order.fishvarizi}} </p>
+                  </div>
+                  <div style="display: flex;">
+                    <p>زمان خرید : </p>
+                    <p> {{persianTaghvim(order.createdat)}} </p>
+                  </div>
+
+                </div>
+
+                  <div class="text-center">
+
+
+                  </div>
+
+              </mat-expansion-panel>
+            </mat-accordion>
+          </li>
+        </ol>
+
+
+        <!-- <li
+          *ngFor="let user of selectedUsers let i=index"
+          style="list-style: none"
+        >
+          <mat-card
+            class="pb-4 shadow-none mt-4"
+            style="background-color: rgb(243, 243, 243)"
+          >
+            <mat-card-content
+              class="w-100 text-align"
+              style="
+                background-color: transparent;
+                box-shadow: none;
+                cursor: pointer;
+                background-color: rgb(243, 243, 243);
+                border-radius: 10px;
+                margin-bottom: 0px;
+                padding-right: 15px;
+              "
+              (click)="toggle()"
+            >
+              <div
+                class="align-items-center align-items-center justify-content-center"
+              >
+                <span
+                  style="
+                    font-size: 10px;
+                    font-family: YekanBakh-Regular !important;
+                  "
+                >
+                  <pre class="m-0">نام کاربری:  </pre>
+                </span>
+
+                <span> {{users[i].userName}} </span>
+                <div [@bodyExpansion]="state" class="expandable-content">
+                  <div class="" *ngIf="users[i].firstName">
+                    <span style="font-size: 10px">
+                      <pre class="m-0">نام:  </pre>
+                    </span>
+
+                    <span> {{user.firstName}} </span>
+                  </div>
+                  <div class="" *ngIf="users[i].lastName">
+                    <span style="font-size: 10px">
+                      <pre class="m-0">نام خانوادگی:  </pre>
+                    </span>
+
+                    <span> {{user.lastName}} </span>
+                  </div>
+                  <div class="">
+                    <span style="font-size: 10px">
+                      <pre class="m-0">تلفن:  </pre>
+                    </span>
+
+                    <span> {{users[i].phone}} </span>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+            <mat-card-actions style="text-align: left; font-weight: bold">
+              <div class="text-center">
+                <button
+                  mat-button
+                  type="submit"
+                  class="btn btn-success btn-p mr-2 pl-4 pr-4"
+                  *ngIf="checkactive(i)"
+                  (click)="InActiveAccount(i)"
+                >
+                  فعال
+                </button>
+
+                <button
+                  mat-button
+                  type="submit"
+                  class="btn btn-danger btn-p mr-2 pl-3 pr-3"
+                  *ngIf="!checkactive(i)"
+                  (click)="ActiveAccount(i)"
+                >
+                  غیر فعال
+                </button>
+
+                <button
+                  mat-button
+                  type="submit"
+                  class="btn tire btn-p pl-5 pr-5"
+                  (click)="openDialog();up(i)"
+                >
+                  ویرایش اطلاعات
+                </button>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+        </li> -->
+      </div>
+
+    <!-- <div style="text-align: center">
+        <button
+          type="submit"
+          class="btn btn-primary ml-1 btn-p"
+          style="
+            height: 40px;
+            width: 90%;
+            background-color: #000080;
+            font-size: 18px;
+          "
+          routerLink="/Adduser"
+        >
+          ایجاد پروفایل
+        </button>
+      </div> -->
+
+  <!-- </mat-tab>
+  <mat-tab label="ایجاد کاربر">
+    <div class="lll">
+      <div class="example-large-box  r" id="signup">
+        <app-signup></app-signup>
+      </div>
+    </div>
+
+  </mat-tab>
+</mat-tab-group> -->
+  <br />
+  <div align="center">
+    <button class="button-next" (click)="nextRout()">بعدی</button>
+    <button class="button-back" (click)="backRout()">قبلی</button>
+  </div>
+</mat-card>

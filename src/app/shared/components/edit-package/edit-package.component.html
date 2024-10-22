@@ -1,0 +1,105 @@
+<mat-grid-list cols="1">
+  <mat-card>
+    <mat-card-header>
+      <mat-icon class="icon">edit</mat-icon>
+      <p class="header">ویرایش پکیج</p>
+    </mat-card-header>
+    <mat-divider class="devider"></mat-divider>
+    <mat-card class="card">
+      <form [formGroup]="form" autocomplete="off">
+        <mat-form-field>
+          <input
+            #name
+            (keyup)="keyup(name.value)"
+            matInput
+            placeholder="افزودن نام جدید"
+            maxlength="100"
+          />
+        </mat-form-field>
+        <div *ngIf="errorMessage != null">
+          {{ errorMessage }}
+        </div>
+
+        <div style="padding-top: 1rem; text-align: left" class="button-row">
+          <button
+            style="border-radius: 16px"
+            class="btn"
+            (click)="onSubmit1()"
+            mat-raised-button
+          >
+            <span>افزودن نام پکیج</span>
+          </button>
+        </div>
+
+        <mat-form-field>
+          <mat-label>انتخاب نام پکیج</mat-label>
+          <mat-select
+            [(value)]="oldName"
+            name="names"
+            [required]="true"
+            (selectionChange)="namesChange($event.value)"
+          >
+            <mat-option *ngFor="let pn of packageNames" [value]="pn.name">
+              {{ pn.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>مدت زمان</mat-label>
+          <mat-select
+            [(value)]="oldDuration"
+            name="duration"
+            [required]="true"
+            (selectionChange)="durationChange($event.value)"
+          >
+            <mat-option *ngFor="let d of durations" [value]="d">
+              {{ d }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="number"
+            [required]="true"
+            formControlName="packagePrice"
+            matInput
+            placeholder="قیمت"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="number"
+            [required]="true"
+            formControlName="packageUsers"
+            matInput
+            placeholder="تعداد کاربران"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="number"
+            [required]="true"
+            formControlName="packageForms"
+            matInput
+            placeholder="تعداد فرم ها"
+          />
+        </mat-form-field>
+        <div style="padding-top: 1rem" class="button-row">
+          <button
+            style="width: 100%; border-radius: 16px"
+            class="btn btn-success"
+            type="submit"
+            (click)="onSubmit2()"
+            mat-raised-button
+          >
+            <span>ثبت تغییرات</span>
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </mat-card>
+</mat-grid-list>

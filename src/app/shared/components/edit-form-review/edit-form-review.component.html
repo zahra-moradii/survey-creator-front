@@ -1,0 +1,365 @@
+<app-headermenu></app-headermenu>
+
+<mat-card style="box-shadow: none; background-color: transparent">
+  <!--Header and Icon of the total card-->
+  <mat-toolbar class="toolbar" style="background-color: transparent">
+    <mat-icon class="settingIcon" style="margin-top: 1rem">edit</mat-icon>
+    <span class="span1" style="margin-top: 1rem">
+      {{ surveyForm.value["surveyTitle"] }}
+    </span>
+    <!-- <mat-divider></mat-divider> -->
+  </mat-toolbar>
+
+  <!--Survey Title Input And Make Each Question Card-->
+  <form [formGroup]="surveyForm" autocomplete="off">
+    <div style="margin-top: 1.5rem">
+      <mat-form-field class="full-width-1" style="text-align: right">
+        <input
+          formControlName="surveyTitle"
+          matInput
+          placeholder="عنوان نظرسنجی"
+          maxlength="100"
+          [required]="true"
+        />
+      </mat-form-field>
+    </div>
+
+    <!--Survey Date Picker-->
+    <div
+      class="col-12 container p-0"
+      style="margin-top: 1rem; margin-bottom: 2rem"
+    >
+      <div style="margin-bottom: 1rem">
+        <ng-persian-datepicker (dateOnSelect)="onSelectStartDate($event)">
+          <p style="margin-right: 0.3rem">
+            تاریخ شروع : <strong>{{ sd }}</strong>
+          </p>
+          <input
+            style="
+              padding: 1rem;
+              padding-right: 1.3rem;
+              width: 100%;
+              height: 35px;
+              border-style: solid;
+              border-color: rgb(223 223 223);
+              border-radius: 5px;
+            "
+            formControlName="start"
+            placeholder="تغییر تاریخ شروع"
+          />
+        </ng-persian-datepicker>
+      </div>
+
+      <div style="margin-bottom: 1rem">
+        <ng-persian-datepicker (dateOnSelect)="onSelectEndDate($event)">
+          <p style="margin-right: 0.3rem">
+            تاریخ پابان : <strong>{{ ed }}</strong>
+          </p>
+          <input
+            style="
+              padding: 1rem;
+              padding-right: 1.3rem;
+              width: 100%;
+              height: 35px;
+              border-style: solid;
+              border-color: rgb(223 223 223);
+              border-radius: 5px;
+            "
+            formControlName="end"
+            placeholder="تغییر تاریخ پایان"
+          />
+        </ng-persian-datepicker>
+      </div>
+    </div>
+
+
+
+    <!--Adding Survey Questions-->
+ <div class="survey-options" style="margin-top: 3rem;">
+      <div formArrayName="surveyQuestions" class="poll-options">
+        <h3
+          class="list-title"
+          style="text-align: center"
+        >
+          ----------- <strong>طراحی سوال(ها)</strong> -----------
+        </h3>
+
+        <!--Start List-Style-->
+        <ol class="list-style">
+          <li
+            *ngFor="
+              let questionCtrl of surveyForm.get('surveyQuestions')['controls'];
+              let i = index
+            "
+          >
+            <div [formGroupName]="i">
+              <div>
+                <mat-form-field style="text-align: right">
+                  <input
+                    formControlName="questionTitle"
+                    matInput
+                    placeholder="عنوان سوال"
+                    [required]="true"
+                  />
+                </mat-form-field>
+
+                <!--Question Types Options-->
+                <mat-form-field style="text-align: right">
+                  <mat-select
+                    formControlName="questionType"
+                    placeholder="نوع نمایش ظاهری سوال"
+                    [(value)]="selectedOption[i]"
+                    (selectionChange)="
+                      onSelectQuestionType(selectedOption[i], i)
+                    "
+                    [required]="true"
+                  >
+                    <mat-option
+                      style="text-align: right"
+                      *ngFor="let type of questionTypes"
+                      [value]="type.value"
+                    >
+                      {{ type.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <!--ngSwitch-->
+                <div
+                  formGroupName="questionGroup"
+                  [ngSwitch]="questionCtrl.controls.questionType['value']"
+                >
+                  <!--If Question Type === Radio Button-->
+
+                  <div *ngSwitchCase="'Radio Button'">
+                    <div
+                      *ngIf="
+                        questionCtrl.controls.questionGroup.controls.options
+                      "
+                    >
+                      <ul class="question-type" formArrayName="options">
+                        <li
+                          *ngFor="
+                            let optionCtrl of questionCtrl.controls
+                              .questionGroup.controls.options.controls;
+                            let j = index
+                          "
+                        >
+                          <div [formGroupName]="j">
+                            <!--Input Of Each Option-->
+                            <mat-form-field
+                              style="width: 80%; text-align: right"
+                            >
+                              <input
+                                formControlName="optionText"
+                                matInput
+                                placeholder="جواب شما"
+                                maxlength="100"
+                                [required]="true"
+                              />
+                            </mat-form-field>
+
+                            <!--Remove Option-->
+                            <div class="div1">
+                              <button
+                                mat-mini-fab
+                                style="background-color: #4e4e4e;"
+                                *ngIf="j >= 2"
+                                (click)="removeOption(i, j)"
+                              >
+                                <mat-icon style="color: white">remove</mat-icon>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <!--Add Option-->
+                      <div class="div1">
+                        <button
+                          mat-mini-fab
+                          style="background-color: #ff6e31"
+                          (click)="addOption(i)"
+                          class="add-option-btn"
+                        >
+                          <mat-icon style="color: white">add</mat-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--If Question Type === Check Box-->
+                  <div *ngSwitchCase="'Check Box'">
+                    <div
+                      *ngIf="
+                        questionCtrl.controls.questionGroup.controls.options
+                      "
+                    >
+                      <ul class="question-type" formArrayName="options">
+                        <li
+                          *ngFor="
+                            let optionCtrl of questionCtrl.controls
+                              .questionGroup.controls.options.controls;
+                            let j = index
+                          "
+                        >
+                          <div [formGroupName]="j">
+                            <!--Input Of Each Option-->
+                            <mat-form-field
+                              style="width: 80%; text-align: right"
+                            >
+                              <input
+                                formControlName="optionText"
+                                matInput
+                                placeholder="جواب شما"
+                                maxlength="100"
+                                [required]="true"
+                              />
+                            </mat-form-field>
+
+                            <!--Remove Option-->
+                            <div style="text-align: left; padding-top: 1rem">
+                              <button
+                                mat-mini-fab
+                                style="background-color: #4e4e4e;"
+                                *ngIf="j >= 2"
+                                (click)="removeOption(i, j)"
+                              >
+                                <mat-icon style="color: white">remove</mat-icon>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <!--Add Option-->
+                      <div style="text-align: left; padding-top: 1rem">
+                        <button
+                          mat-mini-fab
+                          style="background-color: #ff6e31"
+                          (click)="addOption(i)"
+                        >
+                          <mat-icon style="color: white">add</mat-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--If Question Type === Text-->
+                  <div *ngSwitchCase="'Text'">
+                    <mat-form-field
+                      class="full-width"
+                      style="font-size: 12px; text-align: right"
+                    >
+                      <textarea
+                        class="textarea"
+                        disabled
+                        matInput
+                        placeholder="کاربر در این مکان متن مورد نظر خود را وارد می‌نماید"
+                      ></textarea>
+                    </mat-form-field>
+                  </div>
+
+                  <!--If Question Type === Calendar-->
+                  <div *ngSwitchCase="'Calendar'">
+                    <mat-form-field
+                      appearance="fill"
+                      class="full-width-1"
+                      style="text-align: right"
+                    >
+                      <mat-label>پیش نمایش تقویم</mat-label>
+                      <input
+                        matInput
+                        [matDatepicker]="picker"
+                        disabled="true"
+                      />
+                      <mat-datepicker-toggle
+                        matSuffix
+                        [for]="picker"
+                      ></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+
+                  <!--If Question Type === File-->
+                  <div *ngSwitchCase="'File'">
+                    <h4>آپلود فایل</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!--Remove Question Button-->
+              <div class="div2">
+                <button
+                  style="border-radius: 5px; width: 115px;margin-bottom: 2rem;"
+                  mat-raised-button
+                  *ngIf="i > 0"
+                  color="warn"
+                  type="button"
+                  (click)="onRemoveQuestion(i)"
+                  class="mat-raised-button"
+                >
+                  حذف سوال {{ i + 1 }}
+                </button>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <!--Add Question Button-->
+        <div style="padding-top: 1rem">
+          <button
+            style="
+              width: 100%;
+              border-radius: 5px;
+              background-color: #ff6e31;
+              border: none;
+              color: white;
+            "
+            class="btn b"
+            type="button"
+            mat-raised-button
+            (click)="onAddQuestion()"
+          >
+            افزودن سوال جدید
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Create New Survey Button-->
+    <div style="padding-top: 1rem" class="button-row" *ngIf="surveyForm.valid">
+      <button
+        style="
+          width: 100%;
+          border-radius: 5px;
+          background-color: #000080;
+          border: none;
+          color: white;
+        "
+        class="btn"
+        type="submit"
+        (click)="onSubmit()"
+        mat-raised-button
+      >
+        <span>ذخیره تغییرات</span>
+      </button>
+    </div>
+
+    <div style="padding-top: 1rem" class="button-row" *ngIf="!surveyForm.valid">
+      <button
+        style="
+          width: 100%;
+          border-radius: 5px;
+          background-color: #4e4e4e;
+          border: none;
+        "
+        class="btn btn-success"
+        type="submit"
+        mat-raised-button
+      >
+        <span>لطفا تمام فیلدها را پر کنید</span>
+      </button>
+    </div>
+  </form>
+</mat-card>

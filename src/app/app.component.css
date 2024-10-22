@@ -1,0 +1,42 @@
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+
+.example-small-box,
+.example-large-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.example-small-box {
+  height: 300px;
+  width: 300px;
+}
+
+.example-large-box {
+  height: 550px;
+  width: 300px;
+}
+
+.lll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-f {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.r {
+  border-radius: 20px;
+}
+
+.d-c {
+  display: contents;
+}

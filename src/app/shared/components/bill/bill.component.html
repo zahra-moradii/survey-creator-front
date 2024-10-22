@@ -1,0 +1,166 @@
+<app-headermenu></app-headermenu>
+<div class="area-to-dim" *ngIf="!returnvalue.order_id">
+  <div class="dimmer">
+    <div class="wrapper">
+      <div class="circle color-blue-dark" ></div>
+      <div class="circle color-blue-dark" ></div>
+      <div class="circle color-blue-dark"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div align='center' class="align-items-center">
+        <span class="p-0 m-0 w-100 " style="color: #000080; font-weight: 900; font-size: 15px;"> در حال دریافت اطلاعات ...</span>
+      </div>
+  </div>
+
+  </div>
+</div>
+
+<div *ngIf="returnvalue.order_id">
+  <p style="
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 16px;
+    font-weight: bold;
+  ">
+    خرید شما با موفقیت انجام شد ✅
+  </p>
+
+  <div id="print">
+    <mat-card style="background-color: transparent; margin-top: 2rem;box-shadow: none;">
+      <div>
+        <div style="display: flex; justify-content: space-between">
+          <p style="margin-right: 1rem">فروشنده: <strong>فرم‌لاین</strong></p>
+          <p style="margin-left: 1rem">
+            خریدار: <strong>{{returnvalue.user}}</strong>
+          </p>
+        </div>
+
+        <div style="display: flex; justify-content: space-between">
+          <p style="margin-right: 1rem; margin-left: 1rem">
+            شماره فاکتور: <strong>{{returnvalue.order_id}}</strong>
+          </p>
+
+          <p style="margin-left: 1rem">
+            تاریخ: <strong>{{returnvalue.purchaseDate}}</strong>
+          </p>
+        </div>
+      </div>
+
+      <mat-divider style="width: 100%"></mat-divider>
+      <mat-card-content>
+        <div>
+          <div style="
+          display: flex;
+          justify-content: space-between;
+          margin-right: 2rem;
+          margin-left: 2rem;
+          margin-top: 1rem;
+        ">
+            <p>نام پکیج</p>
+            <p>{{returnvalue.packagename}}</p>
+          </div>
+        </div>
+
+        <div>
+          <div style="
+          display: flex;
+          justify-content: space-between;
+          margin-right: 2rem;
+          margin-left: 2rem;
+        ">
+            <p>مدت زمان</p>
+            <p>{{returnvalue.packagetime}}</p>
+          </div>
+        </div>
+
+        <div>
+          <div style="
+          display: flex;
+          justify-content: space-between;
+          margin-right: 2rem;
+          margin-left: 2rem;
+        ">
+            <p>تعداد فرم‌ها</p>
+            <p>{{returnvalue.forms}} فرم</p>
+          </div>
+        </div>
+
+        <div>
+          <div style="
+          display: flex;
+          justify-content: space-between;
+          margin-right: 2rem;
+          margin-left: 2rem;
+        ">
+            <p>تعداد کاربران</p>
+            <p>{{returnvalue.users}} کابر</p>
+          </div>
+        </div>
+
+        <div>
+          <div style="
+          display: flex;
+          justify-content: space-between;
+          margin-right: 2rem;
+          margin-left: 2rem;
+        ">
+            <p>قیمت</p>
+            <p>{{returnvalue.price}} تومان</p>
+          </div>
+        </div>
+
+        <div>
+          <div style="
+          display: flex;
+          justify-content: space-between;
+          margin-right: 2rem;
+          margin-left: 2rem;
+        ">
+            <p>مالیات</p>
+            <p>{{returnvalue.tax}} درصد</p>
+          </div>
+        </div>
+
+        <div>
+          <div style="
+          display: flex;
+          justify-content: space-between;
+          margin-right: 2rem;
+          margin-left: 2rem;
+        ">
+            <p>تخفیف</p>
+            <p>{{returnvalue.discount}} درصد</p>
+          </div>
+        </div>
+
+        <mat-divider style="width: 100%"></mat-divider>
+
+        <div style="margin-top: 1rem">
+          <div style="
+          display: flex;
+          justify-content: space-between;
+          margin-right: 2rem;
+          margin-left: 2rem;
+        ">
+            <p><strong>قیمت نهایی</strong></p>
+            <p><strong>{{returnvalue.amount}} تومان</strong></p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <button [useExistingCss]="true" printTitle="فاکتور خرید" printSectionId="print" ngxPrint type="button"
+    class="btn btn-success c-u btn-p start-survay font-body" style="
+    box-shadow: none;
+    border-radius: 5px;
+    background-color: #000080;
+    font-weight: bolder;
+    margin-right: 1rem;
+    width: 90%;
+    margin-top: 1rem;
+  ">
+    چاپ فاکتور
+  </button>
+</div>

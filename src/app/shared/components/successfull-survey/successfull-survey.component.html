@@ -1,0 +1,48 @@
+<app-headermenu></app-headermenu>
+<body style="background-color: #41A950 !important;height: 610px;">
+<mat-card class="card">
+  <div>
+    <p class="p" style="font-size: 18px">فرم نظرسنجی شما با کد</p>
+    <div style="display: flex;justify-content: center;">
+      <mat-icon
+        style="color: rgb(255, 255, 255); cursor: pointer; padding-left: 0.5rem"
+        [cdkCopyToClipboard]="codeValue"
+        (click)="onCopy()"
+
+      >
+        file_copy</mat-icon
+      >
+    <p style="font-size: 14px;padding-top: 0.1rem;color: white;">
+      {{ code }}
+    </p>
+  </div>
+    <div class="col-12 text-center text-white mt-1">
+      <span>با موفقیت ایجاد شد</span>
+      <span class="px-2" style="vertical-align: text-bottom">✅</span>
+    </div>
+    <div class="div">
+      <button
+        class="btn button bg-white col-10"
+        type="button"
+        mat-raised-button
+        style="margin-top: 1rem;margin-bottom: 0.5rem;"
+      >
+        <a class="text-black" [routerLink]="['/ViewSurvey', code]"
+          >مشاهده فرم نظرسنجی</a
+        >
+      </button>
+    </div>
+    <div class="div">
+      <button
+        class="btn button bg-white col-10"
+        type="button"
+        mat-raised-button
+      >
+        <a class="text-black" (click)="changeroute()"
+          >ایجاد فرم نظرسنجی جدید</a
+        >
+      </button>
+    </div>
+  </div>
+</mat-card>
+</body>

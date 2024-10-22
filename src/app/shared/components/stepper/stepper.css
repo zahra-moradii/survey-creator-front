@@ -1,0 +1,59 @@
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: #000080;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-state-edit{
+  background-color: rgb(133, 133, 133);
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.button-next {
+  font-size: 15px;
+  background-color: #000080;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 0.3em 1.5em;
+}
+
+.button-next:focus {
+  outline: none;
+}
+
+.button-back {
+  font-size: 15px;
+  background-color: rgb(133, 133, 133);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 0.3em 1.5em;
+  margin-right: 5px;
+}
+
+.button-back:focus {
+  outline: none;
+}
+
+.ok {
+  color: #41A950;
+}
+
+.button-done {
+  font-size: 15px;
+  background-color: #41A950;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 0.3em 1.5em;
+}
+
+.r {
+  border-radius: 20px;
+}

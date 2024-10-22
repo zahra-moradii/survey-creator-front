@@ -1,0 +1,240 @@
+<div style="background-color: transparent">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <div>
+    <form [formGroup]="form" panelClass="kk"  style="width: 300px;">
+      <mat-form-field panelClass="kk">
+        <mat-label class="f-vasir">نوع کاربر</mat-label>
+        <mat-select
+          [formControl]="userControl"
+          name="user"
+          [(value)]="select"
+          panelClass="dropDown-seasons-panel"
+        >
+          <mat-option *ngFor="let user of types" [value]="user.value">
+            {{user.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </div>
+  <div>
+    <div>
+      <ng-container [ngSwitch]="select">
+        <div *ngSwitchCase="'user'">
+          <div>
+            <div class="example-container">
+              <mat-form-field>
+                <mat-label class="f-vasir">نام</mat-label>
+                <input
+                  matInput
+                  [(ngModel)]="signUpUserData.firstName"
+                  name="firstname"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <br />
+          <div class="">
+            <div class="example-container">
+              <mat-form-field>
+                <mat-label class="f-vasir">نام خانوادگی</mat-label>
+                <input
+                  matInput
+                  [(ngModel)]="signUpUserData.lastName"
+                  name="lastname"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <br />
+          <div class="">
+            <div class="example-container">
+              <mat-form-field hideRequiredMarker>
+                <mat-label class="f-vasir">نام کاربری</mat-label>
+                <input
+                  matInput
+                  placeholder="pat@example.com"
+                  [formControl]="email"
+                  required
+                  [(ngModel)]="signUpUserData.userName"
+                  name="username"
+                />
+                <mat-error *ngIf="email.invalid"
+                  >{{getErrorMessage()}}</mat-error
+                >
+              </mat-form-field>
+            </div>
+          </div>
+          <br />
+          <div class="example-container">
+            <mat-form-field hideRequiredMarker>
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+                class="button-hide"
+              >
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-label class="f-vasir">رمز عبور</mat-label>
+              <input
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                [formControl]="password"
+                required
+                [(ngModel)]="signUpUserData.password"
+                name="password"
+              />
+              <mat-error *ngIf="password.invalid"
+                >{{getErrorMessage_p()}}</mat-error
+              >
+            </mat-form-field>
+          </div>
+          <br />
+          <div>
+            <form class="example-form">
+              <mat-form-field
+                class="example-full-width"
+                hideRequiredMarker
+              >
+                <mat-label class="f-vasir">تلفن</mat-label>
+                <input
+                  type="tel"
+                  matInput
+                  placeholder="0912-345-6789"
+                  maxlength="11"
+                  (keypress)="numberOnly($event)"
+                  [formControl]="phone"
+                  required
+                  [(ngModel)]="signUpUserData.phone"
+                  name="phone"
+                />
+                <mat-error *ngIf="phone.invalid"
+                  >{{getErrorMessage_phone()}}</mat-error
+                >
+              </mat-form-field>
+            </form>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-center">
+            <button
+              type="submit"
+              class="btn btn-primary btn-p mt-3 sh-l"
+              style="border-radius: 5px;background-color: #000080;color: white;width: 100%;"
+              (click)="signUpUser()"
+            >
+              ثبت نام
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'legal'">
+          <div class="">
+            <div class="example-container">
+              <mat-form-field>
+                <mat-label class="f-vasir">نام شرکت</mat-label>
+                <input
+                  matInput
+                  [(ngModel)]="signUpLegalData.companyName"
+                  name="companyName"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+
+          <br />
+          <div class="">
+            <div class="example-container">
+              <mat-form-field hideRequiredMarker>
+                <mat-label class="f-vasir">نام کاربری</mat-label>
+                <input
+                  matInput
+                  placeholder="pat@example.com"
+                  [formControl]="email"
+                  required
+                  [(ngModel)]="signUpLegalData.userName"
+                  name="username"
+                />
+                <mat-error *ngIf="email.invalid"
+                  >{{getErrorMessage()}}</mat-error
+                >
+              </mat-form-field>
+            </div>
+          </div>
+          <br />
+          <div class="example-container" style="direction: rtl">
+            <mat-form-field hideRequiredMarker>
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+                class="button-hide"
+              >
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-label class="f-vasir">رمز عبور</mat-label>
+              <input
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                [formControl]="password"
+                required
+                [(ngModel)]="signUpLegalData.password"
+                name="password"
+              />
+              <mat-error *ngIf="password.invalid"
+                >{{getErrorMessage_p()}}</mat-error
+              >
+            </mat-form-field>
+          </div>
+          <div>
+            <br />
+            <form class="example-form">
+              <mat-form-field
+                class="example-full-width"
+                hideRequiredMarker
+              >
+                <mat-label class="f-vasir">تلفن</mat-label>
+                <input
+                  type="tel"
+                  matInput
+                  placeholder="0912-345-6789"
+                  maxlength="11"
+                  (keypress)="numberOnly($event)"
+                  [formControl]="phone"
+                  required
+                  [(ngModel)]="signUpLegalData.phone"
+                  name="phone"
+                />
+                <mat-error *ngIf="phone.invalid"
+                  >{{getErrorMessage_phone()}}</mat-error
+                >
+              </mat-form-field>
+            </form>
+          </div>
+          <br /><br /><br /><br />
+
+          <div class="d-flex align-items-center justify-content-center">
+            <button
+              type="button"
+              class="btn btn-primary btn-p mt-3 sh-l"
+              style="border-radius: 5px;background-color: #000080;color: white;width: 100%;"
+              (click)="signUpLegal()"
+            >
+              ثبت نام
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

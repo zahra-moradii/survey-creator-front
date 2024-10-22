@@ -1,0 +1,101 @@
+
+<app-headermenu></app-headermenu>
+<mat-card style="box-shadow: none; background-color: transparent;box-shadow: none;">
+  <p
+    style="
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      padding-top: 1rem;
+    "
+  >
+    پکیج {{ package.name ? package.name : ""}} {{  packagePrice.duration ? packagePrice.duration : "" }}
+  </p>
+
+  <div style="display: flex; justify-content: space-between;padding-top: 2rem;">
+    <p class="pr-4">تعداد فرم</p>
+    <div style="display: flex;">
+    <p style="font-weight: bold;">{{ packagePrice.forms }}</p>
+    <p class="pl-4" style="padding-right: 5px;">فرم</p>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <p class="pr-4">تعداد کاربر</p>
+    <div style="display: flex;">
+    <p style="font-weight: bold;"> {{ packagePrice.users }}</p>
+    <p class="pl-4" style="padding-right: 5px;">کاربر</p>
+  </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <p class="pr-4">قیمت پکیج</p>
+    <div style="display: flex;">
+      <p style="font-weight: bold;">{{packagePrice.price}}</p>
+      <p class="pl-4" style="padding-right: 5px;">تومان</p>
+    </div>
+  </div>
+
+  <div *ngIf="discount" style="display: flex; justify-content: space-between">
+    <p class="pr-4" >تخفیف {{discount.percent}} %</p>
+    <div style="display: flex;">
+      <p style="font-weight: bold;">{{Round(discount.percent/100 * packagePrice.price)}}</p>
+      <p class="pl-4" style="padding-right: 5px;">تومان</p>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <p class="pr-4">مالیات 9 %</p>
+    <div style="display: flex;">
+      <p style="font-weight: bold;">{{Round(0.09 * packagePrice.price)}}</p>
+      <p class="pl-4" style="padding-right: 5px;">تومان</p>
+    </div>
+  </div>
+
+    <mat-divider style="width: 80%;margin-left: 2.5rem;"></mat-divider>
+
+  <div style="display: flex; justify-content: space-between;padding-top: 1rem;">
+    <p class="pr-4" style="font-size: 18px;">قیمت نهایی</p>
+    <div style="display: flex;">
+      <p style="font-weight: bold;font-size: 18px;" *ngIf="!discount">{{ Round((packagePrice.price) + (0.09 * packagePrice.price))}}</p>
+        <p style="font-weight: bold;font-size: 18px;" *ngIf="discount">{{ Round(((packagePrice.price) - (discount.percent/100*packagePrice.price)) + (0.09 * ((packagePrice.price) - (discount.percent/100*packagePrice.price)) ))}}</p>
+      <p class="pl-4" style="padding-right: 5px;font-size: 18px;">تومان</p>
+    </div>
+  </div>
+
+    <div style="text-align: center;margin-top: 2rem;">
+      <button type="button" class="btn btn-success button" (click)="pay()">خرید</button>
+    </div>
+
+  </mat-card>
+  <!-- <div align="center" class=" justify-content-center align-items-center " *ngIf="true">
+
+        khckh ,hhh
+
+    </div> -->
+
+
+    <!-- <div style="background-color:red ;">
+      <div>
+        example
+      </div>
+    </div> -->
+    <div class="area-to-dim" *ngIf="dim">
+      <app-headermenu ></app-headermenu>
+      <div class="dimmer">
+        <div class="wrapper">
+          <div class="circle color-blue-dark" ></div>
+          <div class="circle color-blue-dark" ></div>
+          <div class="circle color-blue-dark"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+          <div align='center' class="align-items-center">
+            <span class="p-0 m-0 w-100 " style="color: #ff9100; font-weight: 900; font-size: 15px;">در حال اتصال به درگاه پرداخت</span>
+          </div>
+      </div>
+
+      </div>
+    </div>
+
+

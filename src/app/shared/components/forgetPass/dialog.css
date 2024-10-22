@@ -1,0 +1,16 @@
+button {
+  margin-right: 8px;
+}
+
+.button-cancel {
+  font-size: 15px;
+  background-color: rgb(206, 8, 8);
+  border: none;
+  color: white;
+  border-radius: 10em;
+  padding: 0.3em 1.5em;
+}
+
+.button-cancel:focus {
+  outline: none;
+}

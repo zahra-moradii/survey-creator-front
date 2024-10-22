@@ -1,0 +1,2553 @@
+<div *ngIf="hasToken == false">
+<header style="box-shadow: 8px 2px 5px 2px white">
+  <mat-toolbar
+    style="
+      box-shadow: 8px 2px 5px 2px rgb(228, 228, 228);
+      background-color: white;
+      border-bottom: thin;
+      border-bottom-style: groove;
+      border-bottom-color: rgb(230, 230, 230);
+    "
+  >
+    <mat-toolbar-row>
+      <div style="cursor: pointer; margin-right: 1rem" routerLink="/">
+        <svg
+          style="width: 30px; height: 30px; padding-left: 0.2rem"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0,0,256,256"
+          width="96px"
+          height="96px"
+          fill-rule="nonzero"
+        >
+          <defs>
+            <linearGradient
+              x1="21.241"
+              y1="39.241"
+              x2="3.541"
+              y2="21.541"
+              gradientUnits="userSpaceOnUse"
+              id="color-1"
+            >
+              <stop offset="0.108" stop-color="#000000"></stop>
+              <stop offset="0.433" stop-color="#000080"></stop>
+            </linearGradient>
+            <linearGradient
+              x1="44.41029"
+              y1="9.58989"
+              x2="14.59"
+              y2="39.41123"
+              gradientUnits="userSpaceOnUse"
+              id="color-2"
+            >
+              <stop offset="0" stop-color="#0000cb"></stop>
+              <stop offset="1" stop-color="#000043"></stop>
+            </linearGradient>
+          </defs>
+          <g
+            fill="none"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <g transform="scale(5.33333,5.33333)">
+              <path
+                d="M16.599,41.42l-15.019,-15.019c-0.774,-0.774 -0.774,-2.028 0,-2.802l4.019,-4.019c0.774,-0.774 2.028,-0.774 2.802,0l15.019,15.019c0.774,0.774 0.774,2.028 0,2.802l-4.019,4.019c-0.774,0.773 -2.028,0.773 -2.802,0z"
+                fill="url(#color-1)"
+              ></path>
+              <path
+                d="M12.58,34.599l27.019,-27.019c0.774,-0.774 2.028,-0.774 2.802,0l4.019,4.019c0.774,0.774 0.774,2.028 0,2.802l-27.019,27.019c-0.774,0.774 -2.028,0.774 -2.802,0l-4.019,-4.019c-0.773,-0.774 -0.773,-2.028 0,-2.802z"
+                fill="url(#color-2)"
+              ></path>
+            </g>
+          </g>
+        </svg>
+        <span
+          style="font-family: YekanBakh-ExtraBlack !important; font-size: 20px"
+          >فرم‌</span
+        >
+        <span
+          style="
+            font-family: YekanBakh-ExtraBlack !important;
+            font-size: 20px;
+            color: #000080;
+            padding-left: 1rem;
+          "
+          >لاین</span
+        >
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<div *ngIf="isFormEnable == false">
+  <p style="font-size: 18px;text-align: center;margin-top: 3rem;margin-bottom: 3rem;">
+    متاسفیم🙁 <br /><br />
+    فرم نظرسنجی مورد نظر شما <br/>در بازه زمانی شروع تا پایان قرار ندارد
+  </p>
+  <svg
+    class="animated"
+    id="freepik_stories-calendar"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 500 500"
+    version="1.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.com/svgjs"
+  >
+    <style>
+      svg#freepik_stories-calendar:not(.animated) .animable {
+        opacity: 0;
+      }
+      svg#freepik_stories-calendar.animated #freepik--Character--inject-53 {
+        animation: 3s Infinite linear floating;
+        animation-delay: 0s;
+      }
+      @keyframes floating {
+        0% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    </style>
+    <g
+      id="freepik--background-complete--inject-53"
+      class="animable"
+      style="transform-origin: 250px 226.395px"
+    >
+      <rect
+        y="382.4"
+        width="500"
+        height="0.25"
+        style="fill: rgb(250, 250, 250); transform-origin: 250px 382.525px"
+        id="elzzrheg5joda"
+        class="animable"
+      ></rect>
+      <rect
+        x="398.39"
+        y="393.28"
+        width="24.83"
+        height="0.25"
+        style="fill: rgb(224, 224, 224); transform-origin: 410.805px 393.405px"
+        id="elquj587r4co"
+        class="animable"
+      ></rect>
+      <rect
+        x="430.56"
+        y="393.15"
+        width="8.39"
+        height="0.25"
+        style="fill: rgb(224, 224, 224); transform-origin: 434.755px 393.275px"
+        id="elpt2mn812jen"
+        class="animable"
+      ></rect>
+      <rect
+        x="280.04"
+        y="394.83"
+        width="51.99"
+        height="0.25"
+        style="fill: rgb(224, 224, 224); transform-origin: 306.035px 394.955px"
+        id="elq2ghwpqaru"
+        class="animable"
+      ></rect>
+      <rect
+        x="260.02"
+        y="397.54"
+        width="7.75"
+        height="0.25"
+        style="fill: rgb(224, 224, 224); transform-origin: 263.895px 397.665px"
+        id="elwi1e9eykhkq"
+        class="animable"
+      ></rect>
+      <rect
+        x="98.59"
+        y="389.63"
+        width="13.36"
+        height="0.25"
+        style="fill: rgb(224, 224, 224); transform-origin: 105.27px 389.755px"
+        id="elpg308y9wc8p"
+        class="animable"
+      ></rect>
+      <rect
+        x="117.5"
+        y="389.63"
+        width="67.76"
+        height="0.25"
+        style="fill: rgb(224, 224, 224); transform-origin: 151.38px 389.755px"
+        id="elwstvsr4ggtr"
+        class="animable"
+      ></rect>
+      <rect
+        x="80.36"
+        y="395.67"
+        width="47.14"
+        height="0.25"
+        style="fill: rgb(224, 224, 224); transform-origin: 103.93px 395.795px"
+        id="elj9jkqm3ir3"
+        class="animable"
+      ></rect>
+      <path
+        d="M237,337.8H43.91a5.71,5.71,0,0,1-5.7-5.71V60.66A5.71,5.71,0,0,1,43.91,55H237a5.71,5.71,0,0,1,5.71,5.71V332.09A5.71,5.71,0,0,1,237,337.8ZM43.91,55.2a5.46,5.46,0,0,0-5.45,5.46V332.09a5.46,5.46,0,0,0,5.45,5.46H237a5.47,5.47,0,0,0,5.46-5.46V60.66A5.47,5.47,0,0,0,237,55.2Z"
+        style="fill: rgb(224, 224, 224); transform-origin: 140.46px 196.4px"
+        id="ela1hitq86lnh"
+        class="animable"
+      ></path>
+      <path
+        d="M453.31,337.8H260.21a5.72,5.72,0,0,1-5.71-5.71V60.66A5.72,5.72,0,0,1,260.21,55h193.1A5.71,5.71,0,0,1,459,60.66V332.09A5.71,5.71,0,0,1,453.31,337.8ZM260.21,55.2a5.47,5.47,0,0,0-5.46,5.46V332.09a5.47,5.47,0,0,0,5.46,5.46h193.1a5.47,5.47,0,0,0,5.46-5.46V60.66a5.47,5.47,0,0,0-5.46-5.46Z"
+        style="fill: rgb(224, 224, 224); transform-origin: 356.75px 196.4px"
+        id="ela3w17q9ok7v"
+        class="animable"
+      ></path>
+      <g id="eljn4gxk5bpsg">
+        <rect
+          x="341.75"
+          y="318.28"
+          width="35.33"
+          height="64.12"
+          style="
+            fill: rgb(224, 224, 224);
+            transform-origin: 359.415px 350.34px;
+            transform: rotate(180deg);
+          "
+          class="animable"
+          id="eltml636gq9f"
+        ></rect>
+      </g>
+      <rect
+        x="377.08"
+        y="318.28"
+        width="42.15"
+        height="64.12"
+        style="fill: rgb(235, 235, 235); transform-origin: 398.155px 350.34px"
+        id="elinlw5yovu5"
+        class="animable"
+      ></rect>
+      <g id="elrw69scbsgpn">
+        <rect
+          x="341.75"
+          y="323.7"
+          width="77.85"
+          height="2.9"
+          style="
+            fill: rgb(224, 224, 224);
+            opacity: 0.7;
+            mix-blend-mode: multiply;
+            transform-origin: 380.675px 325.15px;
+            transform: rotate(180deg);
+          "
+          class="animable"
+          id="elghzqhcjwsn"
+        ></rect>
+      </g>
+      <g id="el4ier2qtwhrs">
+        <rect
+          x="339.8"
+          y="311.57"
+          width="37.28"
+          height="13.36"
+          style="
+            fill: rgb(224, 224, 224);
+            transform-origin: 358.44px 318.25px;
+            transform: rotate(180deg);
+          "
+          class="animable"
+          id="elzifmztz2p1"
+        ></rect>
+      </g>
+      <rect
+        x="377.08"
+        y="311.57"
+        width="44.1"
+        height="13.36"
+        style="fill: rgb(235, 235, 235); transform-origin: 399.13px 318.25px"
+        id="els22k9xwchm"
+        class="animable"
+      ></rect>
+      <rect
+        x="75.13"
+        y="73.99"
+        width="118.93"
+        height="141.9"
+        style="fill: rgb(224, 224, 224); transform-origin: 134.595px 144.94px"
+        id="el28pn5soxqro"
+        class="animable"
+      ></rect>
+      <rect
+        x="77.68"
+        y="73.99"
+        width="121.83"
+        height="141.9"
+        style="fill: rgb(235, 235, 235); transform-origin: 138.595px 144.94px"
+        id="el8kdk5jmf14r"
+        class="animable"
+      ></rect>
+      <rect
+        x="75.13"
+        y="215.89"
+        width="118.93"
+        height="10.11"
+        style="fill: rgb(224, 224, 224); transform-origin: 134.595px 220.945px"
+        id="ell9cdnihg3ij"
+        class="animable"
+      ></rect>
+      <rect
+        x="86.74"
+        y="215.89"
+        width="121.83"
+        height="10.11"
+        style="fill: rgb(235, 235, 235); transform-origin: 147.655px 220.945px"
+        id="elr3s0t1ts80q"
+        class="animable"
+      ></rect>
+      <g id="el6v6dl452r4f">
+        <rect
+          x="75.26"
+          y="91.64"
+          width="126.66"
+          height="106.59"
+          style="
+            fill: rgb(245, 245, 245);
+            transform-origin: 138.59px 144.935px;
+            transform: rotate(90deg);
+          "
+          class="animable"
+          id="elyjhlxv21amd"
+        ></rect>
+      </g>
+      <polygon
+        points="98.38 208.27 143.09 81.61 164.19 81.61 119.49 208.27 98.38 208.27"
+        style="fill: rgb(250, 250, 250); transform-origin: 131.285px 144.94px"
+        id="eljpohuuuoagf"
+        class="animable"
+      ></polygon>
+      <path
+        d="M88.82,165.3a.55.55,0,0,1-.54-.55V86.56a.54.54,0,0,1,.54-.54.55.55,0,0,1,.55.54v78.19A.55.55,0,0,1,88.82,165.3Z"
+        style="fill: rgb(235, 235, 235); transform-origin: 88.825px 125.66px"
+        id="el3ffhcld9vlb"
+        class="animable"
+      ></path>
+      <polygon
+        points="124.02 208.27 168.73 81.61 176.96 81.61 132.25 208.27 124.02 208.27"
+        style="fill: rgb(250, 250, 250); transform-origin: 150.49px 144.94px"
+        id="el6eoxyed30qi"
+        class="animable"
+      ></polygon>
+      <g id="elz05f5oxr9ki">
+        <rect
+          x="128.07"
+          y="144.46"
+          width="126.66"
+          height="0.97"
+          style="
+            fill: rgb(224, 224, 224);
+            transform-origin: 191.4px 144.945px;
+            transform: rotate(90deg);
+          "
+          class="animable"
+          id="elk6eai03fmia"
+        ></rect>
+      </g>
+      <polygon
+        points="201.3 91.35 82.38 91.35 81.68 84.57 200.6 84.57 201.3 91.35"
+        style="fill: rgb(224, 224, 224); transform-origin: 141.49px 87.96px"
+        id="elumfk2dy45h8"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="201.3 96.32 82.38 96.32 81.68 89.53 200.6 89.53 201.3 96.32"
+        style="fill: rgb(224, 224, 224); transform-origin: 141.49px 92.925px"
+        id="elxqgwsb9otgr"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="201.3 102.28 82.38 102.28 81.68 95.49 200.6 95.49 201.3 102.28"
+        style="fill: rgb(224, 224, 224); transform-origin: 141.49px 98.885px"
+        id="elgk84z1s9fb4"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="201.3 108.91 82.38 108.91 81.68 102.13 200.6 102.13 201.3 108.91"
+        style="fill: rgb(224, 224, 224); transform-origin: 141.49px 105.52px"
+        id="eldfovdncccro"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="201.3 116.86 82.38 116.86 81.68 110.07 200.6 110.07 201.3 116.86"
+        style="fill: rgb(224, 224, 224); transform-origin: 141.49px 113.465px"
+        id="elu2c833lnm8a"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="201.3 125.79 82.38 125.79 81.68 119.01 200.6 119.01 201.3 125.79"
+        style="fill: rgb(224, 224, 224); transform-origin: 141.49px 122.4px"
+        id="el0dusrd05x12c"
+        class="animable"
+      ></polygon>
+      <rect
+        x="291.43"
+        y="73.99"
+        width="118.93"
+        height="141.9"
+        style="fill: rgb(224, 224, 224); transform-origin: 350.895px 144.94px"
+        id="ela5opnpq9t84"
+        class="animable"
+      ></rect>
+      <rect
+        x="293.97"
+        y="73.99"
+        width="121.83"
+        height="141.9"
+        style="fill: rgb(235, 235, 235); transform-origin: 354.885px 144.94px"
+        id="eltiui45r3wq"
+        class="animable"
+      ></rect>
+      <rect
+        x="291.43"
+        y="215.89"
+        width="118.93"
+        height="10.11"
+        style="fill: rgb(224, 224, 224); transform-origin: 350.895px 220.945px"
+        id="elknx77yg84xs"
+        class="animable"
+      ></rect>
+      <rect
+        x="303.04"
+        y="215.89"
+        width="121.83"
+        height="10.11"
+        style="fill: rgb(235, 235, 235); transform-origin: 363.955px 220.945px"
+        id="elkpeaqb8rps"
+        class="animable"
+      ></rect>
+      <g id="elcb34xuuunwp">
+        <rect
+          x="291.56"
+          y="91.64"
+          width="126.66"
+          height="106.59"
+          style="
+            fill: rgb(245, 245, 245);
+            transform-origin: 354.89px 144.935px;
+            transform: rotate(90deg);
+          "
+          class="animable"
+          id="elfr6m9z9kygj"
+        ></rect>
+      </g>
+      <polygon
+        points="314.68 208.27 359.39 81.61 380.49 81.61 335.78 208.27 314.68 208.27"
+        style="fill: rgb(250, 250, 250); transform-origin: 347.585px 144.94px"
+        id="elgyez0c0aqak"
+        class="animable"
+      ></polygon>
+      <path
+        d="M305.12,165.3a.55.55,0,0,1-.54-.55V86.56a.54.54,0,0,1,1.08,0v78.19A.55.55,0,0,1,305.12,165.3Z"
+        style="fill: rgb(235, 235, 235); transform-origin: 305.12px 125.66px"
+        id="elzxfq0kryus"
+        class="animable"
+      ></path>
+      <polygon
+        points="340.32 208.27 385.03 81.61 393.25 81.61 348.55 208.27 340.32 208.27"
+        style="fill: rgb(250, 250, 250); transform-origin: 366.785px 144.94px"
+        id="elrpih58swfea"
+        class="animable"
+      ></polygon>
+      <g id="eloz9u031es88">
+        <rect
+          x="344.37"
+          y="144.46"
+          width="126.66"
+          height="0.97"
+          style="
+            fill: rgb(224, 224, 224);
+            transform-origin: 407.7px 144.945px;
+            transform: rotate(90deg);
+          "
+          class="animable"
+          id="el7fai2ewfcwa"
+        ></rect>
+      </g>
+      <polygon
+        points="417.6 91.35 298.68 91.35 297.97 84.57 416.9 84.57 417.6 91.35"
+        style="fill: rgb(224, 224, 224); transform-origin: 357.785px 87.96px"
+        id="el4xb0ub92mk4"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="417.6 96.32 298.68 96.32 297.97 89.53 416.9 89.53 417.6 96.32"
+        style="fill: rgb(224, 224, 224); transform-origin: 357.785px 92.925px"
+        id="elk9g522haa3p"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="417.6 102.28 298.68 102.28 297.97 95.49 416.9 95.49 417.6 102.28"
+        style="fill: rgb(224, 224, 224); transform-origin: 357.785px 98.885px"
+        id="elwuxp7a18m5"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="417.6 108.91 298.68 108.91 297.97 102.13 416.9 102.13 417.6 108.91"
+        style="fill: rgb(224, 224, 224); transform-origin: 357.785px 105.52px"
+        id="elzkxloht5zmb"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="417.6 116.86 298.68 116.86 297.97 110.07 416.9 110.07 417.6 116.86"
+        style="fill: rgb(224, 224, 224); transform-origin: 357.785px 113.465px"
+        id="elz2xbu92i5fj"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="417.6 125.79 298.68 125.79 297.97 119.01 416.9 119.01 417.6 125.79"
+        style="fill: rgb(224, 224, 224); transform-origin: 357.785px 122.4px"
+        id="elb9t0fzaom3e"
+        class="animable"
+      ></polygon>
+      <rect
+        x="294.29"
+        y="292.46"
+        width="23.75"
+        height="89.94"
+        style="fill: rgb(224, 224, 224); transform-origin: 306.165px 337.43px"
+        id="elfhv1srufkk7"
+        class="animable"
+      ></rect>
+      <polygon
+        points="313.52 382.4 318.03 382.4 318.03 371.38 308.79 371.38 313.52 382.4"
+        style="fill: rgb(245, 245, 245); transform-origin: 313.41px 376.89px"
+        id="elx90321ia07"
+        class="animable"
+      ></polygon>
+      <rect
+        x="63.81"
+        y="292.46"
+        width="23.75"
+        height="89.94"
+        style="fill: rgb(224, 224, 224); transform-origin: 75.685px 337.43px"
+        id="elk88tpgkl0d"
+        class="animable"
+      ></rect>
+      <rect
+        x="83.62"
+        y="292.46"
+        width="234.42"
+        height="83.88"
+        style="fill: rgb(245, 245, 245); transform-origin: 200.83px 334.4px"
+        id="elcul0ezcsl6u"
+        class="animable"
+      ></rect>
+      <g id="eli6sezomhjvh">
+        <rect
+          x="228.48"
+          y="270.51"
+          width="59.9"
+          height="112.2"
+          style="
+            fill: rgb(224, 224, 224);
+            transform-origin: 258.43px 326.61px;
+            transform: rotate(-90deg);
+          "
+          class="animable"
+          id="elrp4gtovvtdo"
+        ></rect>
+      </g>
+      <g id="elh0v9ys9zbz">
+        <rect
+          x="113.26"
+          y="270.51"
+          width="59.9"
+          height="112.2"
+          style="
+            fill: rgb(224, 224, 224);
+            transform-origin: 143.21px 326.61px;
+            transform: rotate(-90deg);
+          "
+          class="animable"
+          id="elqi91ik8g95"
+        ></rect>
+      </g>
+      <g id="eleex19nmi16g">
+        <rect
+          x="255.1"
+          y="309.79"
+          width="6.67"
+          height="112.2"
+          style="
+            fill: rgb(224, 224, 224);
+            transform-origin: 258.435px 365.89px;
+            transform: rotate(90deg);
+          "
+          class="animable"
+          id="el73a6t9m1brn"
+        ></rect>
+      </g>
+      <g id="elfs01r1an0r6">
+        <rect
+          x="139.88"
+          y="309.79"
+          width="6.67"
+          height="112.2"
+          style="
+            fill: rgb(224, 224, 224);
+            transform-origin: 143.215px 365.89px;
+            transform: rotate(90deg);
+          "
+          class="animable"
+          id="elo32xo098dxe"
+        ></rect>
+      </g>
+      <path
+        d="M182.73,300.24h-79a13,13,0,0,1-9.39-4h97.82A13,13,0,0,1,182.73,300.24Z"
+        style="fill: rgb(245, 245, 245); transform-origin: 143.25px 298.24px"
+        id="el5uy3lhhzrbs"
+        class="animable"
+      ></path>
+      <path
+        d="M298.37,300.24h-79a13,13,0,0,1-9.39-4h97.82A12.94,12.94,0,0,1,298.37,300.24Z"
+        style="fill: rgb(245, 245, 245); transform-origin: 258.89px 298.24px"
+        id="elyoq78k4vjx"
+        class="animable"
+      ></path>
+      <polygon
+        points="88.13 382.4 83.61 382.4 83.61 371.38 92.85 371.38 88.13 382.4"
+        style="fill: rgb(245, 245, 245); transform-origin: 88.23px 376.89px"
+        id="el3vcs93qjos5"
+        class="animable"
+      ></polygon>
+      <g id="el908y3jq1uep">
+        <rect
+          x="229.12"
+          y="237.24"
+          width="26.44"
+          height="55.22"
+          style="
+            fill: rgb(224, 224, 224);
+            opacity: 0.4;
+            mix-blend-mode: multiply;
+            transform-origin: 242.34px 264.85px;
+          "
+          class="animable"
+          id="elcih7feh13cf"
+        ></rect>
+      </g>
+      <polygon
+        points="277.77 292.46 233.02 292.46 228.81 232.83 273.55 232.83 277.77 292.46"
+        style="fill: rgb(224, 224, 224); transform-origin: 253.29px 262.645px"
+        id="el0tx2emtdzjoo"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="282.86 292.46 234.29 292.46 230.08 232.83 278.64 232.83 282.86 292.46"
+        style="fill: rgb(245, 245, 245); transform-origin: 256.47px 262.645px"
+        id="eljums5m5mz2b"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="236.54 290.18 232.65 235.11 276.4 235.11 280.3 290.18 236.54 290.18"
+        style="fill: rgb(250, 250, 250); transform-origin: 256.475px 262.645px"
+        id="elrv8fbf9qpz"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="247.13 277.85 244.98 247.44 265.81 247.44 267.96 277.85 247.13 277.85"
+        style="fill: rgb(245, 245, 245); transform-origin: 256.47px 262.645px"
+        id="el8mi8d9nj8d"
+        class="animable"
+      ></polygon>
+      <circle
+        cx="159.35"
+        cy="271.05"
+        r="11.62"
+        style="fill: rgb(235, 235, 235); transform-origin: 159.35px 271.05px"
+        id="elf2677yw5d8m"
+        class="animable"
+      ></circle>
+      <circle
+        cx="179.25"
+        cy="276.59"
+        r="11.62"
+        style="fill: rgb(235, 235, 235); transform-origin: 179.25px 276.59px"
+        id="el90fvgmrat1o"
+        class="animable"
+      ></circle>
+      <g id="elugloiwbwbyc">
+        <circle
+          cx="196.07"
+          cy="271.75"
+          r="7.75"
+          style="
+            fill: rgb(235, 235, 235);
+            transform-origin: 196.07px 271.75px;
+            transform: rotate(-22.39deg);
+          "
+          class="animable"
+          id="el0x7hj68wytyn"
+        ></circle>
+      </g>
+      <g id="elfyrcivtwr2g">
+        <circle
+          cx="170.98"
+          cy="264"
+          r="7.75"
+          style="
+            fill: rgb(235, 235, 235);
+            transform-origin: 170.98px 264px;
+            transform: rotate(-80.8deg);
+          "
+          class="animable"
+          id="elo84nlsm3r2q"
+        ></circle>
+      </g>
+      <path
+        d="M140.77,274.51s.91,17.95,35.78,17.95,35.78-17.95,35.78-17.95Z"
+        style="fill: rgb(224, 224, 224); transform-origin: 176.55px 283.485px"
+        id="el5npe9grwqtx"
+        class="animable"
+      ></path>
+      <path
+        d="M108.57,286.31s-11.36-19.58,4.4-35.17c0,0,4.11,2.68,4,6.29s-4.41,4.51-3.48,7.52,5,6,2.35,8.45.43,4.69.25,7.74S108.57,286.31,108.57,286.31Z"
+        style="fill: rgb(224, 224, 224); transform-origin: 110.791px 268.725px"
+        id="elx9y60mwdgr"
+        class="animable"
+      ></path>
+      <path
+        d="M109.43,288.1s4.6-22.16-15.27-32c0,0-3.06,3.85-1.86,7.25s5.6,2.89,5.67,6-2.9,7.24.44,8.75,1.07,4.6,2.2,7.43S109.43,288.1,109.43,288.1Z"
+        style="fill: rgb(224, 224, 224); transform-origin: 100.956px 272.103px"
+        id="el9uoxkds5l7r"
+        class="animable"
+      ></path>
+      <path
+        d="M92,277.85s.38,14.61,14.86,14.61,14.86-14.61,14.86-14.61Z"
+        style="fill: rgb(235, 235, 235); transform-origin: 106.86px 285.155px"
+        id="el8yrap9cmwz9"
+        class="animable"
+      ></path>
+    </g>
+    <g
+      id="freepik--Shadow--inject-53"
+      class="animable"
+      style="transform-origin: 250px 416.24px"
+    >
+      <ellipse
+        cx="250"
+        cy="416.24"
+        rx="193.89"
+        ry="11.32"
+        style="fill: rgb(245, 245, 245); transform-origin: 250px 416.24px"
+        id="elttun0ioujt"
+        class="animable"
+      ></ellipse>
+    </g>
+    <g
+      id="freepik--Calendar--inject-53"
+      class="animable"
+      style="transform-origin: 274.337px 321.906px"
+    >
+      <path
+        d="M180.45,272.44a2.34,2.34,0,0,1,0-4.67c5.72,0,10.54-8.19,10.54-17.89a2.34,2.34,0,0,1,4.67,0C195.66,262.53,189,272.44,180.45,272.44Z"
+        style="fill: #ff6e31; transform-origin: 186.961px 260.066px"
+        id="eluiu8ufuk2tf"
+        class="animable"
+      ></path>
+      <path
+        d="M215.74,272.44a2.34,2.34,0,0,1,0-4.67c5.72,0,10.54-8.19,10.54-17.89a2.34,2.34,0,0,1,4.67,0C231,262.53,224.27,272.44,215.74,272.44Z"
+        style="fill: #ff6e31; transform-origin: 222.252px 260.066px"
+        id="elasghvdrs2n"
+        class="animable"
+      ></path>
+      <path
+        d="M251,272.44a2.34,2.34,0,0,1,0-4.67c5.71,0,10.54-8.19,10.54-17.89a2.33,2.33,0,0,1,4.66,0C266.23,262.53,259.56,272.44,251,272.44Z"
+        style="fill: #ff6e31; transform-origin: 257.506px 259.995px"
+        id="elamp4rvhohl"
+        class="animable"
+      ></path>
+      <path
+        d="M286.32,272.44a2.34,2.34,0,1,1,0-4.67c5.71,0,10.54-8.19,10.54-17.89a2.33,2.33,0,0,1,4.66,0C301.52,262.53,294.84,272.44,286.32,272.44Z"
+        style="fill: #ff6e31; transform-origin: 292.674px 260.001px"
+        id="elapnl6jo1q9b"
+        class="animable"
+      ></path>
+      <path
+        d="M321.6,272.44a2.34,2.34,0,0,1,0-4.67c5.72,0,10.54-8.19,10.54-17.89a2.34,2.34,0,0,1,4.67,0C336.81,262.53,330.13,272.44,321.6,272.44Z"
+        style="fill: #ff6e31; transform-origin: 328.111px 260.066px"
+        id="elpjo9ni6g46d"
+        class="animable"
+      ></path>
+      <path
+        d="M356.89,272.44a2.34,2.34,0,0,1,0-4.67c5.71,0,10.54-8.19,10.54-17.89a2.34,2.34,0,0,1,4.67,0C372.1,262.53,365.42,272.44,356.89,272.44Z"
+        style="fill: #ff6e31; transform-origin: 363.401px 260.066px"
+        id="elunn1ulrz3b"
+        class="animable"
+      ></path>
+      <g id="el4z2h0cty6q7">
+        <g
+          style="opacity: 0.3; transform-origin: 275.181px 259.997px"
+          class="animable"
+          id="elbjsfd6ba1to"
+        >
+          <path
+            d="M180.45,272.44a2.34,2.34,0,0,1,0-4.67c5.72,0,10.54-8.19,10.54-17.89a2.34,2.34,0,0,1,4.67,0C195.66,262.53,189,272.44,180.45,272.44Z"
+            id="elg42flz7d0ck"
+            class="animable"
+            style="transform-origin: 186.961px 260.066px"
+          ></path>
+          <path
+            d="M215.74,272.44a2.34,2.34,0,0,1,0-4.67c5.72,0,10.54-8.19,10.54-17.89a2.34,2.34,0,0,1,4.67,0C231,262.53,224.27,272.44,215.74,272.44Z"
+            id="ela3rn5aksz9u"
+            class="animable"
+            style="transform-origin: 222.252px 260.066px"
+          ></path>
+          <path
+            d="M251,272.44a2.34,2.34,0,0,1,0-4.67c5.71,0,10.54-8.19,10.54-17.89a2.33,2.33,0,0,1,4.66,0C266.23,262.53,259.56,272.44,251,272.44Z"
+            id="elvn8a7l8bvne"
+            class="animable"
+            style="transform-origin: 257.506px 259.995px"
+          ></path>
+          <path
+            d="M286.32,272.44a2.34,2.34,0,1,1,0-4.67c5.71,0,10.54-8.19,10.54-17.89a2.33,2.33,0,0,1,4.66,0C301.52,262.53,294.84,272.44,286.32,272.44Z"
+            id="elckrmtmp3ti"
+            class="animable"
+            style="transform-origin: 292.674px 260.001px"
+          ></path>
+          <path
+            d="M321.6,272.44a2.34,2.34,0,0,1,0-4.67c5.72,0,10.54-8.19,10.54-17.89a2.34,2.34,0,0,1,4.67,0C336.81,262.53,330.13,272.44,321.6,272.44Z"
+            id="elc7auq4qwsvl"
+            class="animable"
+            style="transform-origin: 328.111px 260.066px"
+          ></path>
+          <path
+            d="M356.89,272.44a2.34,2.34,0,0,1,0-4.67c5.71,0,10.54-8.19,10.54-17.89a2.34,2.34,0,0,1,4.67,0C372.1,262.53,365.42,272.44,356.89,272.44Z"
+            id="el02tp52xsx00w"
+            class="animable"
+            style="transform-origin: 363.401px 260.066px"
+          ></path>
+        </g>
+      </g>
+      <path
+        d="M158.34,252.27H385.52a12.51,12.51,0,0,1,12.19,11.19l12.58,141.83a10.11,10.11,0,0,1-10.2,11.19H172.9a12.53,12.53,0,0,1-12.19-11.19L148.14,263.46A10.1,10.1,0,0,1,158.34,252.27Z"
+        style="fill: #ff6e31; transform-origin: 279.214px 334.375px"
+        id="elb4iogwm7nsq"
+        class="animable"
+      ></path>
+      <g id="elm9jnt1f5ofq">
+        <path
+          d="M158.34,252.27H385.52a12.51,12.51,0,0,1,12.19,11.19l12.58,141.83a10.11,10.11,0,0,1-10.2,11.19H172.9a12.53,12.53,0,0,1-12.19-11.19L148.14,263.46A10.1,10.1,0,0,1,158.34,252.27Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.4;
+            transform-origin: 279.214px 334.375px;
+          "
+          class="animable"
+          id="elq1b459uqbvl"
+        ></path>
+      </g>
+      <path
+        d="M383.63,252.27H156.44a11.86,11.86,0,0,0-11.7,11.19l-6.4,141.83A10.63,10.63,0,0,0,149,416.48H376.21a11.86,11.86,0,0,0,11.7-11.19l6.41-141.83A10.64,10.64,0,0,0,383.63,252.27Z"
+        style="fill: #ff6e31; transform-origin: 266.33px 334.375px"
+        id="elatjpqhxz4q6"
+        class="animable"
+      ></path>
+      <g id="elobluebt248i">
+        <path
+          d="M383.63,252.27H156.44a11.86,11.86,0,0,0-11.7,11.19l-6.4,141.83A10.63,10.63,0,0,0,149,416.48H376.21a11.86,11.86,0,0,0,11.7-11.19l6.41-141.83A10.64,10.64,0,0,0,383.63,252.27Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.2;
+            transform-origin: 266.33px 334.375px;
+          "
+          class="animable"
+          id="elo0f7eh54b5"
+        ></path>
+      </g>
+      <path
+        d="M160.61,379l5.29-117.13a4.53,4.53,0,0,1,4.48-4.28H369.21a4.07,4.07,0,0,1,4.09,4.28L368,379a4.53,4.53,0,0,1-4.48,4.28H164.7A4.07,4.07,0,0,1,160.61,379Z"
+        style="fill: #ff6e31; transform-origin: 266.955px 320.435px"
+        id="elydailmubnar"
+        class="animable"
+      ></path>
+      <g id="el8bwaugp53ks">
+        <path
+          d="M160.61,379l5.29-117.13a4.53,4.53,0,0,1,4.48-4.28H369.21a4.07,4.07,0,0,1,4.09,4.28L368,379a4.53,4.53,0,0,1-4.48,4.28H164.7A4.07,4.07,0,0,1,160.61,379Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.1;
+            transform-origin: 266.955px 320.435px;
+          "
+          class="animable"
+          id="elsn1xaep2j5"
+        ></path>
+      </g>
+      <g id="elzxknw41uqxd">
+        <path
+          d="M155,388.56l5.55-123a4.74,4.74,0,0,1,4.7-4.49H374.05a4.26,4.26,0,0,1,4.29,4.49l-5.56,123a4.75,4.75,0,0,1-4.69,4.5H159.27A4.25,4.25,0,0,1,155,388.56Z"
+          style="opacity: 0.1; transform-origin: 266.669px 327.065px"
+          class="animable"
+          id="ele80omwcpa3p"
+        ></path>
+      </g>
+      <path
+        d="M149.84,398.48l5.79-128.3a5,5,0,0,1,4.9-4.69H378.34a4.45,4.45,0,0,1,4.48,4.69L377,398.48a5,5,0,0,1-4.9,4.69H154.32A4.44,4.44,0,0,1,149.84,398.48Z"
+        style="fill: rgb(250, 250, 250); transform-origin: 266.33px 334.33px"
+        id="elinxm18r1h0i"
+        class="animable"
+      ></path>
+      <path
+        d="M356.86,273.18h0a3,3,0,0,1-3-3.18h0a3.15,3.15,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.15,3.15,0,0,1,356.86,273.18Z"
+        style="fill: #ff6e31; transform-origin: 356.915px 270.09px"
+        id="elwqh1x9lvza"
+        class="animable"
+      ></path>
+      <path
+        d="M321.57,273.18h0a3,3,0,0,1-3-3.18h0a3.15,3.15,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.14,3.14,0,0,1,321.57,273.18Z"
+        style="fill: #ff6e31; transform-origin: 321.625px 270.09px"
+        id="el4pwdlvkh56x"
+        class="animable"
+      ></path>
+      <path
+        d="M286.28,273.18h0a3,3,0,0,1-3-3.18h0a3.16,3.16,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.14,3.14,0,0,1,286.28,273.18Z"
+        style="fill: #ff6e31; transform-origin: 286.335px 270.09px"
+        id="elce2ecazcdc4"
+        class="animable"
+      ></path>
+      <path
+        d="M251,273.18h0a3,3,0,0,1-3-3.18h0a3.17,3.17,0,0,1,3.12-3h0a3,3,0,0,1,3,3.18h0A3.14,3.14,0,0,1,251,273.18Z"
+        style="fill: #ff6e31; transform-origin: 251.06px 270.09px"
+        id="elwyua5kul8b"
+        class="animable"
+      ></path>
+      <path
+        d="M215.71,273.18h0a3,3,0,0,1-3-3.18h0a3.15,3.15,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.15,3.15,0,0,1,215.71,273.18Z"
+        style="fill: #ff6e31; transform-origin: 215.765px 270.09px"
+        id="el6f3hq4rmiuj"
+        class="animable"
+      ></path>
+      <path
+        d="M180.42,273.18h0a3,3,0,0,1-3-3.18h0a3.15,3.15,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.14,3.14,0,0,1,180.42,273.18Z"
+        style="fill: #ff6e31; transform-origin: 180.475px 270.09px"
+        id="elg4wx2wqxc4k"
+        class="animable"
+      ></path>
+      <g id="elqpxx9vhmjl">
+        <g
+          style="opacity: 0.1; transform-origin: 268.695px 270.09px"
+          class="animable"
+          id="el57clypncjwm"
+        >
+          <path
+            d="M356.86,273.18h0a3,3,0,0,1-3-3.18h0a3.15,3.15,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.15,3.15,0,0,1,356.86,273.18Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 356.915px 270.09px;
+            "
+            id="elpahrldhzqw"
+            class="animable"
+          ></path>
+          <path
+            d="M321.57,273.18h0a3,3,0,0,1-3-3.18h0a3.15,3.15,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.14,3.14,0,0,1,321.57,273.18Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 321.625px 270.09px;
+            "
+            id="elmj4wsow44wp"
+            class="animable"
+          ></path>
+          <path
+            d="M286.28,273.18h0a3,3,0,0,1-3-3.18h0a3.16,3.16,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.14,3.14,0,0,1,286.28,273.18Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 286.335px 270.09px;
+            "
+            id="elpbxd4byxksa"
+            class="animable"
+          ></path>
+          <path
+            d="M251,273.18h0a3,3,0,0,1-3-3.18h0a3.17,3.17,0,0,1,3.12-3h0a3,3,0,0,1,3,3.18h0A3.14,3.14,0,0,1,251,273.18Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 251.06px 270.09px;
+            "
+            id="elsxc24a59lxf"
+            class="animable"
+          ></path>
+          <path
+            d="M215.71,273.18h0a3,3,0,0,1-3-3.18h0a3.15,3.15,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.15,3.15,0,0,1,215.71,273.18Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 215.765px 270.09px;
+            "
+            id="el6bzab7aw684"
+            class="animable"
+          ></path>
+          <path
+            d="M180.42,273.18h0a3,3,0,0,1-3-3.18h0a3.15,3.15,0,0,1,3.11-3h0a3,3,0,0,1,3,3.18h0A3.14,3.14,0,0,1,180.42,273.18Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 180.475px 270.09px;
+            "
+            id="elzpsm3syhel"
+            class="animable"
+          ></path>
+        </g>
+      </g>
+      <path
+        d="M189.24,284.36H171.49a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2-2h17.75a1.86,1.86,0,0,1,1.87,2h0A2.08,2.08,0,0,1,189.24,284.36Z"
+        style="fill: #ff6e31; transform-origin: 180.43px 282.36px"
+        id="eltl21841es8"
+        class="animable"
+      ></path>
+      <path
+        d="M224.53,284.36H206.78a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2.05-2H224.7a1.87,1.87,0,0,1,1.88,2h0A2.08,2.08,0,0,1,224.53,284.36Z"
+        style="fill: #ff6e31; transform-origin: 215.745px 282.36px"
+        id="el42auhqx9yrn"
+        class="animable"
+      ></path>
+      <path
+        d="M259.82,284.36H242.07a1.87,1.87,0,0,1-1.88-2h0a2.08,2.08,0,0,1,2.05-2H260a1.86,1.86,0,0,1,1.87,2h0A2.07,2.07,0,0,1,259.82,284.36Z"
+        style="fill: #ff6e31; transform-origin: 251.03px 282.36px"
+        id="eldpf5l21b4h"
+        class="animable"
+      ></path>
+      <path
+        d="M295.1,284.36H277.35a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2-2h17.75a1.86,1.86,0,0,1,1.87,2h0A2.08,2.08,0,0,1,295.1,284.36Z"
+        style="fill: #ff6e31; transform-origin: 286.29px 282.36px"
+        id="elff4p2950r6f"
+        class="animable"
+      ></path>
+      <path
+        d="M330.39,284.36H312.64a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2.05-2h17.75a1.86,1.86,0,0,1,1.87,2h0A2.08,2.08,0,0,1,330.39,284.36Z"
+        style="fill: #ff6e31; transform-origin: 321.605px 282.36px"
+        id="el9m3eybl2f6d"
+        class="animable"
+      ></path>
+      <path
+        d="M365.68,284.36H347.93a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2.05-2h17.74a1.87,1.87,0,0,1,1.88,2h0A2.08,2.08,0,0,1,365.68,284.36Z"
+        style="fill: #ff6e31; transform-origin: 356.895px 282.36px"
+        id="el4o88pmkmtuy"
+        class="animable"
+      ></path>
+      <g id="el78rgfk03r2">
+        <g
+          style="opacity: 0.3; transform-origin: 268.675px 282.36px"
+          class="animable"
+          id="eljhn361073f"
+        >
+          <path
+            d="M189.24,284.36H171.49a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2-2h17.75a1.86,1.86,0,0,1,1.87,2h0A2.08,2.08,0,0,1,189.24,284.36Z"
+            id="ellq81pdelsn"
+            class="animable"
+            style="transform-origin: 180.43px 282.36px"
+          ></path>
+          <path
+            d="M224.53,284.36H206.78a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2.05-2H224.7a1.87,1.87,0,0,1,1.88,2h0A2.08,2.08,0,0,1,224.53,284.36Z"
+            id="el2sfscyd7lju"
+            class="animable"
+            style="transform-origin: 215.745px 282.36px"
+          ></path>
+          <path
+            d="M259.82,284.36H242.07a1.87,1.87,0,0,1-1.88-2h0a2.08,2.08,0,0,1,2.05-2H260a1.86,1.86,0,0,1,1.87,2h0A2.07,2.07,0,0,1,259.82,284.36Z"
+            id="elnxz1ec4osok"
+            class="animable"
+            style="transform-origin: 251.03px 282.36px"
+          ></path>
+          <path
+            d="M295.1,284.36H277.35a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2-2h17.75a1.86,1.86,0,0,1,1.87,2h0A2.08,2.08,0,0,1,295.1,284.36Z"
+            id="elt6kbfgwdepa"
+            class="animable"
+            style="transform-origin: 286.29px 282.36px"
+          ></path>
+          <path
+            d="M330.39,284.36H312.64a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2.05-2h17.75a1.86,1.86,0,0,1,1.87,2h0A2.08,2.08,0,0,1,330.39,284.36Z"
+            id="el1hb1ux706gl"
+            class="animable"
+            style="transform-origin: 321.605px 282.36px"
+          ></path>
+          <path
+            d="M365.68,284.36H347.93a1.86,1.86,0,0,1-1.87-2h0a2.08,2.08,0,0,1,2.05-2h17.74a1.87,1.87,0,0,1,1.88,2h0A2.08,2.08,0,0,1,365.68,284.36Z"
+            id="elwyfnvs6jd1"
+            class="animable"
+            style="transform-origin: 356.895px 282.36px"
+          ></path>
+        </g>
+      </g>
+      <path
+        d="M190.22,322.13H167.1a3.73,3.73,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.12a3.73,3.73,0,0,1,3.74,3.92l-1,23.12A4.17,4.17,0,0,1,190.22,322.13Z"
+        style="fill: #ff6e31; transform-origin: 179.34px 306.65px"
+        id="eljhnci3drqgd"
+        class="animable"
+      ></path>
+      <path
+        d="M225.51,322.13H202.39a3.72,3.72,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92H226.9a3.74,3.74,0,0,1,3.75,3.92l-1.05,23.12A4.15,4.15,0,0,1,225.51,322.13Z"
+        style="fill: #ff6e31; transform-origin: 214.649px 306.65px"
+        id="elm5hrilmu32d"
+        class="animable"
+      ></path>
+      <path
+        d="M260.79,322.13H237.68a3.74,3.74,0,0,1-3.75-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.72,3.72,0,0,1,3.74,3.92l-1,23.12A4.16,4.16,0,0,1,260.79,322.13Z"
+        style="fill: #ff6e31; transform-origin: 249.906px 306.65px"
+        id="elud0nn9y62mc"
+        class="animable"
+      ></path>
+      <path
+        d="M296.08,322.13H273a3.73,3.73,0,0,1-3.75-3.92l1-23.12a4.15,4.15,0,0,1,4.09-3.92h23.12a3.73,3.73,0,0,1,3.74,3.92l-1,23.12A4.16,4.16,0,0,1,296.08,322.13Z"
+        style="fill: #ff6e31; transform-origin: 285.225px 306.65px"
+        id="el0vn0b2hn9yrf"
+        class="animable"
+      ></path>
+      <path
+        d="M331.37,322.13H308.25a3.73,3.73,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.73,3.73,0,0,1,3.75,3.92l-1,23.12A4.17,4.17,0,0,1,331.37,322.13Z"
+        style="fill: #ff6e31; transform-origin: 320.49px 306.65px"
+        id="el19j0bhr47zk"
+        class="animable"
+      ></path>
+      <path
+        d="M366.65,322.13H343.54a3.72,3.72,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.74,3.74,0,0,1,3.75,3.92l-1.05,23.12A4.15,4.15,0,0,1,366.65,322.13Z"
+        style="fill: #ff6e31; transform-origin: 355.779px 306.65px"
+        id="elvuxjhjgx8a"
+        class="animable"
+      ></path>
+      <g id="el3p33bmr4qac">
+        <g
+          style="opacity: 0.8; transform-origin: 267.56px 306.65px"
+          class="animable"
+          id="elct724u8f8ht"
+        >
+          <path
+            d="M190.22,322.13H167.1a3.73,3.73,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.12a3.73,3.73,0,0,1,3.74,3.92l-1,23.12A4.17,4.17,0,0,1,190.22,322.13Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 179.34px 306.65px;
+            "
+            id="el6ium1zfypvx"
+            class="animable"
+          ></path>
+          <path
+            d="M225.51,322.13H202.39a3.72,3.72,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92H226.9a3.74,3.74,0,0,1,3.75,3.92l-1.05,23.12A4.15,4.15,0,0,1,225.51,322.13Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 214.649px 306.65px;
+            "
+            id="elx88bj84bosr"
+            class="animable"
+          ></path>
+          <path
+            d="M260.79,322.13H237.68a3.74,3.74,0,0,1-3.75-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.72,3.72,0,0,1,3.74,3.92l-1,23.12A4.16,4.16,0,0,1,260.79,322.13Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 249.906px 306.65px;
+            "
+            id="elatsfh7viqn"
+            class="animable"
+          ></path>
+          <path
+            d="M296.08,322.13H273a3.73,3.73,0,0,1-3.75-3.92l1-23.12a4.15,4.15,0,0,1,4.09-3.92h23.12a3.73,3.73,0,0,1,3.74,3.92l-1,23.12A4.16,4.16,0,0,1,296.08,322.13Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 285.225px 306.65px;
+            "
+            id="el5vei4cs2j64"
+            class="animable"
+          ></path>
+          <path
+            d="M331.37,322.13H308.25a3.73,3.73,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.73,3.73,0,0,1,3.75,3.92l-1,23.12A4.17,4.17,0,0,1,331.37,322.13Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 320.49px 306.65px;
+            "
+            id="elmc5iumi919"
+            class="animable"
+          ></path>
+          <path
+            d="M366.65,322.13H343.54a3.72,3.72,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.74,3.74,0,0,1,3.75,3.92l-1.05,23.12A4.15,4.15,0,0,1,366.65,322.13Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 355.779px 306.65px;
+            "
+            id="el7a8b7pgti73"
+            class="animable"
+          ></path>
+        </g>
+      </g>
+      <path
+        d="M188.6,358H165.48a3.73,3.73,0,0,1-3.74-3.92l1-23.12a4.17,4.17,0,0,1,4.1-3.92H190a3.73,3.73,0,0,1,3.74,3.92l-1,23.12A4.17,4.17,0,0,1,188.6,358Z"
+        style="fill: #ff6e31; transform-origin: 177.74px 342.52px"
+        id="eldrb9kmk225"
+        class="animable"
+      ></path>
+      <path
+        d="M223.89,358H200.77a3.73,3.73,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11A3.74,3.74,0,0,1,229,331L228,354.08A4.15,4.15,0,0,1,223.89,358Z"
+        style="fill: #ff6e31; transform-origin: 213.016px 342.52px"
+        id="el3o96ks4vs7p"
+        class="animable"
+      ></path>
+      <path
+        d="M259.17,358H236.06a3.72,3.72,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.72,3.72,0,0,1,3.74,3.92l-1,23.12A4.16,4.16,0,0,1,259.17,358Z"
+        style="fill: #ff6e31; transform-origin: 248.295px 342.52px"
+        id="elsti0abj6n3"
+        class="animable"
+      ></path>
+      <path
+        d="M294.46,358H271.35a3.74,3.74,0,0,1-3.75-3.92l1-23.12a4.15,4.15,0,0,1,4.09-3.92h23.12A3.73,3.73,0,0,1,299.6,331l-1,23.12A4.16,4.16,0,0,1,294.46,358Z"
+        style="fill: #ff6e31; transform-origin: 283.601px 342.52px"
+        id="elrs39h4y8kc"
+        class="animable"
+      ></path>
+      <path
+        d="M329.75,358H306.63a3.73,3.73,0,0,1-3.74-3.92l1-23.12A4.17,4.17,0,0,1,308,327h23.12a3.73,3.73,0,0,1,3.74,3.92l-1,23.12A4.17,4.17,0,0,1,329.75,358Z"
+        style="fill: #ff6e31; transform-origin: 318.875px 342.5px"
+        id="elcoreq51bt3a"
+        class="animable"
+      ></path>
+      <path
+        d="M365,358H341.92a3.72,3.72,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.74,3.74,0,0,1,3.75,3.92l-1.05,23.12A4.15,4.15,0,0,1,365,358Z"
+        style="fill: #ff6e31; transform-origin: 354.159px 342.52px"
+        id="el4oy8b503wya"
+        class="animable"
+      ></path>
+      <g id="el7o2oluipfr">
+        <g
+          style="opacity: 0.8; transform-origin: 265.94px 342.5px"
+          class="animable"
+          id="elp224ud9268n"
+        >
+          <path
+            d="M188.6,358H165.48a3.73,3.73,0,0,1-3.74-3.92l1-23.12a4.17,4.17,0,0,1,4.1-3.92H190a3.73,3.73,0,0,1,3.74,3.92l-1,23.12A4.17,4.17,0,0,1,188.6,358Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 177.74px 342.52px;
+            "
+            id="elbftjmi670c9"
+            class="animable"
+          ></path>
+          <path
+            d="M223.89,358H200.77a3.73,3.73,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11A3.74,3.74,0,0,1,229,331L228,354.08A4.15,4.15,0,0,1,223.89,358Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 213.016px 342.52px;
+            "
+            id="elgmaud8tx83i"
+            class="animable"
+          ></path>
+          <path
+            d="M259.17,358H236.06a3.72,3.72,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.72,3.72,0,0,1,3.74,3.92l-1,23.12A4.16,4.16,0,0,1,259.17,358Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 248.295px 342.52px;
+            "
+            id="elfa9negj8sc6"
+            class="animable"
+          ></path>
+          <path
+            d="M294.46,358H271.35a3.74,3.74,0,0,1-3.75-3.92l1-23.12a4.15,4.15,0,0,1,4.09-3.92h23.12A3.73,3.73,0,0,1,299.6,331l-1,23.12A4.16,4.16,0,0,1,294.46,358Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 283.601px 342.52px;
+            "
+            id="elovdoj9xuck"
+            class="animable"
+          ></path>
+          <path
+            d="M329.75,358H306.63a3.73,3.73,0,0,1-3.74-3.92l1-23.12A4.17,4.17,0,0,1,308,327h23.12a3.73,3.73,0,0,1,3.74,3.92l-1,23.12A4.17,4.17,0,0,1,329.75,358Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 318.875px 342.5px;
+            "
+            id="elcg86afxevvj"
+            class="animable"
+          ></path>
+          <path
+            d="M365,358H341.92a3.72,3.72,0,0,1-3.74-3.92l1-23.12a4.16,4.16,0,0,1,4.1-3.92h23.11a3.74,3.74,0,0,1,3.75,3.92l-1.05,23.12A4.15,4.15,0,0,1,365,358Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 354.159px 342.52px;
+            "
+            id="elq2dtbpswb3"
+            class="animable"
+          ></path>
+        </g>
+      </g>
+      <path
+        d="M187,393.86H163.86a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.16,4.16,0,0,1,4.1-3.92h23.12a3.72,3.72,0,0,1,3.74,3.92l-1,23.11A4.15,4.15,0,0,1,187,393.86Z"
+        style="fill: #ff6e31; transform-origin: 176.1px 378.385px"
+        id="el8krfp62lxaw"
+        class="animable"
+      ></path>
+      <path
+        d="M222.27,393.86H199.15a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.15,4.15,0,0,1,4.1-3.92h23.11a3.72,3.72,0,0,1,3.75,3.92l-1,23.11A4.14,4.14,0,0,1,222.27,393.86Z"
+        style="fill: #ff6e31; transform-origin: 211.39px 378.385px"
+        id="elo4h4b7mwjkb"
+        class="animable"
+      ></path>
+      <path
+        d="M257.55,393.86H234.44a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.15,4.15,0,0,1,4.1-3.92H259a3.73,3.73,0,0,1,3.75,3.92l-1.05,23.11A4.15,4.15,0,0,1,257.55,393.86Z"
+        style="fill: #ff6e31; transform-origin: 246.725px 378.385px"
+        id="elb1owhjy0ufd"
+        class="animable"
+      ></path>
+      <path
+        d="M292.84,393.86H269.73a3.73,3.73,0,0,1-3.75-3.92l1-23.11a4.14,4.14,0,0,1,4.09-3.92h23.12a3.72,3.72,0,0,1,3.74,3.92l-1,23.11A4.15,4.15,0,0,1,292.84,393.86Z"
+        style="fill: #ff6e31; transform-origin: 281.955px 378.385px"
+        id="el4jw7bn8w80r"
+        class="animable"
+      ></path>
+      <path
+        d="M328.13,393.86H305a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.16,4.16,0,0,1,4.1-3.92h23.12a3.72,3.72,0,0,1,3.74,3.92l-1,23.11A4.16,4.16,0,0,1,328.13,393.86Z"
+        style="fill: #ff6e31; transform-origin: 317.24px 378.385px"
+        id="eloz8v10kgysp"
+        class="animable"
+      ></path>
+      <path
+        d="M363.42,393.86H340.3a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.15,4.15,0,0,1,4.1-3.92h23.11a3.73,3.73,0,0,1,3.75,3.92l-1.05,23.11A4.14,4.14,0,0,1,363.42,393.86Z"
+        style="fill: #ff6e31; transform-origin: 352.54px 378.385px"
+        id="elr0eb8towpdt"
+        class="animable"
+      ></path>
+      <g id="ellpr5hvnm0vn">
+        <g
+          style="opacity: 0.8; transform-origin: 264.32px 378.385px"
+          class="animable"
+          id="elj73bgr5oowg"
+        >
+          <path
+            d="M187,393.86H163.86a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.16,4.16,0,0,1,4.1-3.92h23.12a3.72,3.72,0,0,1,3.74,3.92l-1,23.11A4.15,4.15,0,0,1,187,393.86Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 176.1px 378.385px;
+            "
+            id="el9m0gllzra9b"
+            class="animable"
+          ></path>
+          <path
+            d="M222.27,393.86H199.15a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.15,4.15,0,0,1,4.1-3.92h23.11a3.72,3.72,0,0,1,3.75,3.92l-1,23.11A4.14,4.14,0,0,1,222.27,393.86Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 211.39px 378.385px;
+            "
+            id="elndn75dwz5o"
+            class="animable"
+          ></path>
+          <path
+            d="M257.55,393.86H234.44a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.15,4.15,0,0,1,4.1-3.92H259a3.73,3.73,0,0,1,3.75,3.92l-1.05,23.11A4.15,4.15,0,0,1,257.55,393.86Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 246.725px 378.385px;
+            "
+            id="el1ckf6cbus87"
+            class="animable"
+          ></path>
+          <path
+            d="M292.84,393.86H269.73a3.73,3.73,0,0,1-3.75-3.92l1-23.11a4.14,4.14,0,0,1,4.09-3.92h23.12a3.72,3.72,0,0,1,3.74,3.92l-1,23.11A4.15,4.15,0,0,1,292.84,393.86Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 281.955px 378.385px;
+            "
+            id="el1daj6kcyjjm"
+            class="animable"
+          ></path>
+          <path
+            d="M328.13,393.86H305a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.16,4.16,0,0,1,4.1-3.92h23.12a3.72,3.72,0,0,1,3.74,3.92l-1,23.11A4.16,4.16,0,0,1,328.13,393.86Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 317.24px 378.385px;
+            "
+            id="elxjphq73chbf"
+            class="animable"
+          ></path>
+          <path
+            d="M363.42,393.86H340.3a3.72,3.72,0,0,1-3.74-3.92l1-23.11a4.15,4.15,0,0,1,4.1-3.92h23.11a3.73,3.73,0,0,1,3.75,3.92l-1.05,23.11A4.14,4.14,0,0,1,363.42,393.86Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 352.54px 378.385px;
+            "
+            id="elcc87ofr7kvc"
+            class="animable"
+          ></path>
+        </g>
+      </g>
+      <path
+        d="M180.45,272.44c-8.52,0-15.2-9.91-15.2-22.56s6.68-22.55,15.2-22.55,15.21,9.91,15.21,22.55a2.34,2.34,0,0,1-4.67,0c0-9.69-4.82-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,1,1,0,4.67Z"
+        style="fill: #ff6e31; transform-origin: 180.455px 249.888px"
+        id="elx1frwfq8vwa"
+        class="animable"
+      ></path>
+      <path
+        d="M215.74,272.44c-8.52,0-15.2-9.91-15.2-22.56s6.68-22.55,15.2-22.55S231,237.24,231,249.88a2.34,2.34,0,0,1-4.67,0c0-9.69-4.82-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,0,1,0,4.67Z"
+        style="fill: #ff6e31; transform-origin: 215.77px 249.885px"
+        id="elgikxh0x2nlu"
+        class="animable"
+      ></path>
+      <path
+        d="M251,272.44c-8.53,0-15.21-9.91-15.21-22.56s6.68-22.55,15.21-22.55,15.2,9.91,15.2,22.55a2.33,2.33,0,0,1-4.66,0c0-9.69-4.83-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,0,1,0,4.67Z"
+        style="fill: #ff6e31; transform-origin: 250.995px 249.885px"
+        id="el6t6v50zgro4"
+        class="animable"
+      ></path>
+      <path
+        d="M286.32,272.44c-8.53,0-15.21-9.91-15.21-22.56s6.68-22.55,15.21-22.55,15.2,9.91,15.2,22.55a2.33,2.33,0,0,1-4.66,0c0-9.69-4.83-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.82,17.89,10.54,17.89a2.34,2.34,0,0,1,0,4.67Z"
+        style="fill: #ff6e31; transform-origin: 286.315px 249.885px"
+        id="el3tpw6jj4td4"
+        class="animable"
+      ></path>
+      <path
+        d="M321.6,272.44c-8.52,0-15.2-9.91-15.2-22.56s6.68-22.55,15.2-22.55,15.21,9.91,15.21,22.55a2.34,2.34,0,0,1-4.67,0c0-9.69-4.82-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,1,1,0,4.67Z"
+        style="fill: #ff6e31; transform-origin: 321.605px 249.888px"
+        id="eldo59fx2dgw5"
+        class="animable"
+      ></path>
+      <path
+        d="M356.89,272.44c-8.52,0-15.2-9.91-15.2-22.56s6.68-22.55,15.2-22.55,15.21,9.91,15.21,22.55a2.34,2.34,0,0,1-4.67,0c0-9.69-4.83-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,0,1,0,4.67Z"
+        style="fill: #ff6e31; transform-origin: 356.895px 249.885px"
+        id="el1702y3fa9ya"
+        class="animable"
+      ></path>
+      <g id="els5qzr3x8ge">
+        <g
+          style="opacity: 0.3; transform-origin: 268.675px 249.888px"
+          class="animable"
+          id="elbxd9wn8jclm"
+        >
+          <path
+            d="M180.45,272.44c-8.52,0-15.2-9.91-15.2-22.56s6.68-22.55,15.2-22.55,15.21,9.91,15.21,22.55a2.34,2.34,0,0,1-4.67,0c0-9.69-4.82-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,1,1,0,4.67Z"
+            id="elkak9chkdbw"
+            class="animable"
+            style="transform-origin: 180.455px 249.888px"
+          ></path>
+          <path
+            d="M215.74,272.44c-8.52,0-15.2-9.91-15.2-22.56s6.68-22.55,15.2-22.55S231,237.24,231,249.88a2.34,2.34,0,0,1-4.67,0c0-9.69-4.82-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,0,1,0,4.67Z"
+            id="elbboj4jyx5cl"
+            class="animable"
+            style="transform-origin: 215.77px 249.885px"
+          ></path>
+          <path
+            d="M251,272.44c-8.53,0-15.21-9.91-15.21-22.56s6.68-22.55,15.21-22.55,15.2,9.91,15.2,22.55a2.33,2.33,0,0,1-4.66,0c0-9.69-4.83-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,0,1,0,4.67Z"
+            id="elettuugkz7qf"
+            class="animable"
+            style="transform-origin: 250.995px 249.885px"
+          ></path>
+          <path
+            d="M286.32,272.44c-8.53,0-15.21-9.91-15.21-22.56s6.68-22.55,15.21-22.55,15.2,9.91,15.2,22.55a2.33,2.33,0,0,1-4.66,0c0-9.69-4.83-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.82,17.89,10.54,17.89a2.34,2.34,0,0,1,0,4.67Z"
+            id="eljdbctn9z9kg"
+            class="animable"
+            style="transform-origin: 286.315px 249.885px"
+          ></path>
+          <path
+            d="M321.6,272.44c-8.52,0-15.2-9.91-15.2-22.56s6.68-22.55,15.2-22.55,15.21,9.91,15.21,22.55a2.34,2.34,0,0,1-4.67,0c0-9.69-4.82-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,1,1,0,4.67Z"
+            id="elru19by9c7ag"
+            class="animable"
+            style="transform-origin: 321.605px 249.888px"
+          ></path>
+          <path
+            d="M356.89,272.44c-8.52,0-15.2-9.91-15.2-22.56s6.68-22.55,15.2-22.55,15.21,9.91,15.21,22.55a2.34,2.34,0,0,1-4.67,0c0-9.69-4.83-17.89-10.54-17.89s-10.54,8.2-10.54,17.89,4.83,17.89,10.54,17.89a2.34,2.34,0,0,1,0,4.67Z"
+            id="el1bgy8rodrmv"
+            class="animable"
+            style="transform-origin: 356.895px 249.885px"
+          ></path>
+        </g>
+      </g>
+      <path
+        d="M288.68,323.42c-8.16-1.62-17.32.27-20.59,8.87-2.63,6.92.74,14.42,8,16.25,6.4,1.61,17.44-.36,19.72-7.74,2.61-8.44-8-11.18-13.95-11.68-1.79-.15-1.78,2.65,0,2.8,2.71.23,5.81.38,8.21,1.87,5,3.13,2.94,8.15-1.32,10.55s-10.79,3-15,.34c-4.6-2.93-4.75-9.37-2-13.57,3.61-5.55,10.2-6.17,16.14-5,1.76.35,2.51-2.35.74-2.7Z"
+        style="fill: #ff6e31; transform-origin: 281.709px 335.979px"
+        id="elwu3ojhnpeu9"
+        class="animable"
+      ></path>
+      <g id="elot4ydyb5qi">
+        <path
+          d="M288.68,323.42c-8.16-1.62-17.32.27-20.59,8.87-2.63,6.92.74,14.42,8,16.25,6.4,1.61,17.44-.36,19.72-7.74,2.61-8.44-8-11.18-13.95-11.68-1.79-.15-1.78,2.65,0,2.8,2.71.23,5.81.38,8.21,1.87,5,3.13,2.94,8.15-1.32,10.55s-10.79,3-15,.34c-4.6-2.93-4.75-9.37-2-13.57,3.61-5.55,10.2-6.17,16.14-5,1.76.35,2.51-2.35.74-2.7Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.1;
+            transform-origin: 281.709px 335.979px;
+          "
+          class="animable"
+          id="elqgz29iq55fn"
+        ></path>
+      </g>
+      <path
+        d="M198.65,291.21a220.55,220.55,0,0,0,26,28.8c1.32,1.23,3.31-.75,2-2a217.28,217.28,0,0,1-25.57-28.23c-1.07-1.42-3.5,0-2.41,1.41Z"
+        style="fill: #ff6e31; transform-origin: 212.737px 304.795px"
+        id="elmd5n2q8c1f"
+        class="animable"
+      ></path>
+      <path
+        d="M201.54,318.84c5.9-10.49,16.23-19.44,26-26.29,1.46-1,.07-3.46-1.41-2.42-10.16,7.14-20.84,16.36-27,27.29a1.4,1.4,0,0,0,2.41,1.42Z"
+        style="fill: #ff6e31; transform-origin: 213.563px 304.678px"
+        id="ely744brusvz8"
+        class="animable"
+      ></path>
+      <g id="elntwdkiqo7">
+        <g
+          style="opacity: 0.2; transform-origin: 213.277px 304.795px"
+          class="animable"
+          id="elllwyznc8f6"
+        >
+          <path
+            d="M198.65,291.21a220.55,220.55,0,0,0,26,28.8c1.32,1.23,3.31-.75,2-2a217.28,217.28,0,0,1-25.57-28.23c-1.07-1.42-3.5,0-2.41,1.41Z"
+            id="eloukot460cvt"
+            class="animable"
+            style="transform-origin: 212.737px 304.795px"
+          ></path>
+          <path
+            d="M201.54,318.84c5.9-10.49,16.23-19.44,26-26.29,1.46-1,.07-3.46-1.41-2.42-10.16,7.14-20.84,16.36-27,27.29a1.4,1.4,0,0,0,2.41,1.42Z"
+            id="elkh44d8iv669"
+            class="animable"
+            style="transform-origin: 213.563px 304.678px"
+          ></path>
+        </g>
+      </g>
+      <path
+        d="M309.87,300.16h18.25a1.4,1.4,0,0,0,0-2.79H309.87a1.4,1.4,0,0,0,0,2.79Z"
+        style="fill: #ff6e31; transform-origin: 318.995px 298.765px"
+        id="el77ck40rpc4r"
+        class="animable"
+      ></path>
+      <path
+        d="M309.66,305.35h10.58a1.4,1.4,0,0,0,0-2.8H309.66a1.4,1.4,0,0,0,0,2.8Z"
+        style="fill: #ff6e31; transform-origin: 314.95px 303.95px"
+        id="elv5lmkp875b"
+        class="animable"
+      ></path>
+      <g id="ell3efbjl7n3b">
+        <g
+          style="opacity: 0.1; transform-origin: 318.834px 301.36px"
+          class="animable"
+          id="elk5fnq07wduk"
+        >
+          <path
+            d="M309.87,300.16h18.25a1.4,1.4,0,0,0,0-2.79H309.87a1.4,1.4,0,0,0,0,2.79Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 318.995px 298.765px;
+            "
+            id="elszhfopuicac"
+            class="animable"
+          ></path>
+          <path
+            d="M309.66,305.35h10.58a1.4,1.4,0,0,0,0-2.8H309.66a1.4,1.4,0,0,0,0,2.8Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 314.95px 303.95px;
+            "
+            id="elmlcioremwr"
+            class="animable"
+          ></path>
+        </g>
+      </g>
+      <path
+        d="M200.56,371.8h15.65a1.4,1.4,0,0,0,0-2.8H200.56a1.4,1.4,0,0,0,0,2.8Z"
+        style="fill: #ff6e31; transform-origin: 208.385px 370.4px"
+        id="el064bmsebttk"
+        class="animable"
+      ></path>
+      <path
+        d="M200,377.81H220.3a1.4,1.4,0,0,0,0-2.8H200a1.4,1.4,0,0,0,0,2.8Z"
+        style="fill: #ff6e31; transform-origin: 210.15px 376.41px"
+        id="eld2j6e05odlt"
+        class="animable"
+      ></path>
+      <path
+        d="M200,384h10.15a1.4,1.4,0,0,0,0-2.8H200a1.4,1.4,0,0,0,0,2.8Z"
+        style="fill: #ff6e31; transform-origin: 205.075px 382.6px"
+        id="elwljyyoxpxs"
+        class="animable"
+      ></path>
+      <g id="elqbaga4o8uf">
+        <g
+          style="opacity: 0.1; transform-origin: 210.15px 376.5px"
+          class="animable"
+          id="eltgtjdxvy6hm"
+        >
+          <path
+            d="M200.56,371.8h15.65a1.4,1.4,0,0,0,0-2.8H200.56a1.4,1.4,0,0,0,0,2.8Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 208.385px 370.4px;
+            "
+            id="elgtzlfaqb96t"
+            class="animable"
+          ></path>
+          <path
+            d="M200,377.81H220.3a1.4,1.4,0,0,0,0-2.8H200a1.4,1.4,0,0,0,0,2.8Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 210.15px 376.41px;
+            "
+            id="el2wbd1su35sc"
+            class="animable"
+          ></path>
+          <path
+            d="M200,384h10.15a1.4,1.4,0,0,0,0-2.8H200a1.4,1.4,0,0,0,0,2.8Z"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 205.075px 382.6px;
+            "
+            id="elm0nkn90i18l"
+            class="animable"
+          ></path>
+        </g>
+      </g>
+    </g>
+    <g
+      id="freepik--Character--inject-53"
+      class="animable"
+      style="transform-origin: 141.084px 265.035px"
+    >
+      <path
+        d="M90.19,214.79l4.73-.21-2.14,9a24.77,24.77,0,0,1-4.58-4.05,2.29,2.29,0,0,1,.24-3.21Z"
+        style="fill: rgb(228, 137, 123); transform-origin: 91.2872px 219.08px"
+        id="el221j4vc6mhy"
+        class="animable"
+      ></path>
+      <polygon
+        points="100.41 219.43 98.29 226.75 92.78 223.56 94.92 214.58 100.41 219.43"
+        style="fill: rgb(228, 137, 123); transform-origin: 96.595px 220.665px"
+        id="eluvpgo6idv39"
+        class="animable"
+      ></polygon>
+      <g id="ellezt1mni9we">
+        <rect
+          x="100.88"
+          y="175.91"
+          width="9.72"
+          height="240.77"
+          style="
+            fill: #ff6e31;
+            transform-origin: 105.74px 296.295px;
+            transform: rotate(-5.29deg);
+          "
+          class="animable"
+          id="elgmid3a80nd6"
+        ></rect>
+      </g>
+      <g id="ela27auft5ys">
+        <rect
+          x="100.88"
+          y="175.91"
+          width="9.72"
+          height="240.77"
+          style="
+            opacity: 0.3;
+            transform-origin: 105.74px 296.295px;
+            transform: rotate(-5.29deg);
+          "
+          class="animable"
+          id="elw467nvlx3x9"
+        ></rect>
+      </g>
+      <g id="elahckaqovciv">
+        <rect
+          x="120.24"
+          y="174.11"
+          width="9.72"
+          height="240.77"
+          style="
+            fill: #ff6e31;
+            transform-origin: 125.1px 294.495px;
+            transform: rotate(-5.29deg);
+          "
+          class="animable"
+          id="el71n02r30ayf"
+        ></rect>
+      </g>
+      <g id="eltkjpuqvk72">
+        <rect
+          x="120.24"
+          y="174.11"
+          width="9.72"
+          height="240.77"
+          style="
+            opacity: 0.3;
+            transform-origin: 125.1px 294.495px;
+            transform: rotate(-5.29deg);
+          "
+          class="animable"
+          id="elj9f99rd8jv"
+        ></rect>
+      </g>
+      <g id="el75y7l3srl44">
+        <rect
+          x="110.56"
+          y="175.01"
+          width="9.72"
+          height="240.77"
+          style="
+            fill: #ff6e31;
+            transform-origin: 115.42px 295.395px;
+            transform: rotate(-5.29deg);
+          "
+          class="animable"
+          id="elmjbx5zw2lp"
+        ></rect>
+      </g>
+      <g id="elktqxti4ypk9">
+        <rect
+          x="110.56"
+          y="175.01"
+          width="9.72"
+          height="240.77"
+          style="
+            opacity: 0.1;
+            transform-origin: 115.42px 295.395px;
+            transform: rotate(-5.29deg);
+          "
+          class="animable"
+          id="eljr53tp4heut"
+        ></rect>
+      </g>
+      <polygon
+        points="107.12 158.31 98.41 159.12 89.8 176.87 118.84 174.18 107.12 158.31"
+        style="fill: #ff6e31; transform-origin: 104.32px 167.59px"
+        id="elt5gs47lmt5k"
+        class="animable"
+      ></polygon>
+      <g id="el28dfjskwv0s">
+        <g
+          style="opacity: 0.8; transform-origin: 104.32px 167.59px"
+          class="animable"
+          id="elfifdiqscwuf"
+        >
+          <polygon
+            points="107.12 158.31 98.41 159.12 89.8 176.87 118.84 174.18 107.12 158.31"
+            style="
+              fill: rgb(250, 250, 250);
+              transform-origin: 104.32px 167.59px;
+            "
+            id="elexkjik0gcw"
+            class="animable"
+          ></polygon>
+        </g>
+      </g>
+      <polygon
+        points="102.1 151.51 98.41 159.12 107.12 158.31 102.1 151.51"
+        style="fill: rgb(38, 50, 56); transform-origin: 102.765px 155.315px"
+        id="elxiir44zoyz"
+        class="animable"
+      ></polygon>
+      <path
+        d="M175.28,165.06c1,1,1.83,1.95,2.69,3s1.68,2,2.5,3c1.65,2,3.19,4.11,4.69,6.26a74,74,0,0,1,7.78,14c.25.64.48,1.31.72,2l.36,1a9.91,9.91,0,0,1,.42,1.84,12.5,12.5,0,0,1-.77,5.87,27.8,27.8,0,0,1-4.48,7.6,62.34,62.34,0,0,1-11.44,10.85l-3.77-4a105.36,105.36,0,0,0,8.12-11.69,22,22,0,0,0,2.44-5.59,2.78,2.78,0,0,0,.05-1.49s0,0,0,0l-.34-.74c-.23-.49-.43-1-.68-1.48a78.26,78.26,0,0,0-7.4-11.69c-1.4-1.91-2.88-3.77-4.38-5.63-.75-.92-1.51-1.84-2.29-2.74l-2.28-2.63Z"
+        style="fill: rgb(228, 137, 123); transform-origin: 180.867px 192.77px"
+        id="eldel06dng5tl"
+        class="animable"
+      ></path>
+      <polygon
+        points="167.93 219.53 172.19 227.96 176.36 224.37 172.94 218.38 167.93 219.53"
+        style="fill: rgb(228, 137, 123); transform-origin: 172.145px 223.17px"
+        id="el6ws7cqpqckp"
+        class="animable"
+      ></polygon>
+      <path
+        d="M135.84,170q-3.89,7.41-8.08,14.65c-1.37,2.43-2.81,4.82-4.21,7.23l-2.15,3.6-.54.9c-.27.43-.57.94-.84,1.28s-.54.75-.8,1.06-.54.66-.8.95a74.52,74.52,0,0,1-6.44,6.22c-2.19,1.87-4.38,3.69-6.64,5.42-4.47,3.49-9.06,6.74-13.82,9.84l-3.43-4.32,11.85-11.67c1.94-2,3.9-3.88,5.75-5.86a70.18,70.18,0,0,0,5.13-5.88q.29-.36.51-.69c.17-.24.29-.44.41-.64a4.7,4.7,0,0,0,.28-.5l.46-.93,1.85-3.77c1.27-2.49,2.51-5,3.8-7.47q3.83-7.47,8-14.77Z"
+        style="fill: rgb(228, 137, 123); transform-origin: 111.965px 192.9px"
+        id="elmp7936jaf4g"
+        class="animable"
+      ></path>
+      <path
+        d="M163.91,136.22c-.13.58.08,1.13.45,1.23s.78-.3.91-.88-.09-1.13-.46-1.23S164,135.64,163.91,136.22Z"
+        style="fill: rgb(38, 50, 56); transform-origin: 164.589px 136.395px"
+        id="elki2m29f9zkf"
+        class="animable"
+      ></path>
+      <path
+        d="M163.93,137.34a22.24,22.24,0,0,0,1.7,5.65,3.39,3.39,0,0,1-2.86-.17Z"
+        style="fill: rgb(222, 87, 83); transform-origin: 164.2px 140.284px"
+        id="el9r5cdj1wxbw"
+        class="animable"
+      ></path>
+      <path
+        d="M165.44,132.7a.36.36,0,0,1-.2-.06,2.67,2.67,0,0,0-2.48-.16.36.36,0,0,1-.46-.19.36.36,0,0,1,.19-.46,3.41,3.41,0,0,1,3.15.24.34.34,0,0,1,.09.48A.35.35,0,0,1,165.44,132.7Z"
+        style="fill: rgb(38, 50, 56); transform-origin: 164.034px 132.127px"
+        id="elgy6lnn7k4zn"
+        class="animable"
+      ></path>
+      <path
+        d="M143.68,138.43c1.26,5.38,2.69,15.22-.93,18.81,0,0,1.68,5.45,11.67,5.45,11,0,5-5.45,5-5.45-6.05-1.43-6.07-5.88-5.19-10.05Z"
+        style="fill: rgb(228, 137, 123); transform-origin: 151.902px 150.56px"
+        id="elye6ifw465hq"
+        class="animable"
+      ></path>
+      <path
+        d="M141.39,159.11c-.86-1.72-1.8-3.7,0-4.32,1.94-.68,12.71-1.37,16.48-.1a4,4,0,0,1,2.86,4.78Z"
+        style="fill: #ff6e31; transform-origin: 150.6px 156.725px"
+        id="elz16glcwguar"
+        class="animable"
+      ></path>
+      <g id="elwvyn0cdl15i">
+        <path
+          d="M141.39,159.11c-.86-1.72-1.8-3.7,0-4.32,1.94-.68,12.71-1.37,16.48-.1a4,4,0,0,1,2.86,4.78Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.6;
+            transform-origin: 150.6px 156.725px;
+          "
+          class="animable"
+          id="elru6qk177vr9"
+        ></path>
+      </g>
+      <path
+        d="M127,410a9.34,9.34,0,0,1-1.92-.21.16.16,0,0,1-.13-.13.18.18,0,0,1,.07-.18c.08-.06,2-1.44,3.12-1.2a.83.83,0,0,1,.58.41.69.69,0,0,1,0,.83C128.48,409.91,127.75,410,127,410Zm-1.43-.46c1.1.18,2.6.18,2.9-.23,0,0,.12-.16-.05-.45a.49.49,0,0,0-.35-.24A4.59,4.59,0,0,0,125.57,409.56Z"
+        style="fill: rgb(250, 250, 250); transform-origin: 126.903px 409.126px"
+        id="el77c43vi3b8u"
+        class="animable"
+      ></path>
+      <path
+        d="M125.12,409.82l-.09,0a.16.16,0,0,1-.08-.15c0-.09.09-2.21.92-2.91a.93.93,0,0,1,.74-.23.58.58,0,0,1,.57.47c.16.82-1.24,2.42-2,2.83Zm1.37-3a.6.6,0,0,0-.39.15,4.06,4.06,0,0,0-.78,2.31c.72-.57,1.61-1.78,1.52-2.26,0-.05,0-.17-.27-.2Z"
+        style="fill: rgb(250, 250, 250); transform-origin: 126.071px 408.176px"
+        id="elk3tvwpuvg9m"
+        class="animable"
+      ></path>
+      <path
+        d="M171.12,410a12.3,12.3,0,0,1-2.26-.21.17.17,0,0,1-.14-.14.18.18,0,0,1,.08-.18c.37-.21,3.63-2.08,4.42-.79a.67.67,0,0,1,0,.77C173,409.89,172.06,410,171.12,410Zm-1.71-.47c1.38.2,3.24.17,3.56-.28,0,0,.1-.14-.05-.39C172.48,408.15,170.5,409,169.41,409.55Z"
+        style="fill: rgb(250, 250, 250); transform-origin: 171.03px 409.115px"
+        id="eloz1f5svidr8"
+        class="animable"
+      ></path>
+      <path
+        d="M168.89,409.82a.19.19,0,0,1-.1,0,.17.17,0,0,1-.07-.16c0-.08.12-2.06,1-2.83a1.2,1.2,0,0,1,1-.3c.49.05.63.3.66.5.14.85-1.53,2.4-2.41,2.8Zm1.68-3a.87.87,0,0,0-.6.23,3.88,3.88,0,0,0-.87,2.27c.88-.54,2-1.77,1.93-2.28,0-.05,0-.18-.36-.22Z"
+        style="fill: rgb(250, 250, 250); transform-origin: 170.053px 408.173px"
+        id="ele1r3y1v7ljq"
+        class="animable"
+      ></path>
+      <polygon
+        points="160.81 409.64 168.16 409.64 168.23 392.63 160.89 392.63 160.81 409.64"
+        style="fill: rgb(228, 137, 123); transform-origin: 164.52px 401.135px"
+        id="el05vsyqtjd029"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="116.7 409.64 124.05 409.64 127.09 392.63 119.74 392.63 116.7 409.64"
+        style="fill: rgb(228, 137, 123); transform-origin: 121.895px 401.135px"
+        id="elpkoicpxbpn"
+        class="animable"
+      ></polygon>
+      <path
+        d="M124.54,408.79h-8.25a.61.61,0,0,0-.61.51l-1.2,6.53a1.13,1.13,0,0,0,1.13,1.3c2.88-.05,4.27-.22,7.9-.22,2.23,0,6.84.24,9.93.24s3.36-3,2.09-3.33c-5.71-1.24-7.91-2.95-9.78-4.57A1.83,1.83,0,0,0,124.54,408.79Z"
+        style="fill: rgb(38, 50, 56); transform-origin: 125.355px 412.97px"
+        id="elu7gig1z9uhh"
+        class="animable"
+      ></path>
+      <path
+        d="M168.08,408.79h-8a.61.61,0,0,0-.61.51l-1.2,6.53a1.11,1.11,0,0,0,1.11,1.3c2.89-.05,7.06-.22,10.7-.22,4.26,0,7.94.24,12.93.24,3,0,3.73-3,2.46-3.33-5.8-1.26-10.5-1.39-15.58-4.45A3.46,3.46,0,0,0,168.08,408.79Z"
+        style="fill: rgb(38, 50, 56); transform-origin: 172.16px 412.97px"
+        id="elheg0wtvbmka"
+        class="animable"
+      ></path>
+      <path
+        d="M128.74,158.9c-6.83,1.58-14,20.35-14,20.35l14.19,9.48a110.51,110.51,0,0,0,8.54-15.53C141.22,164.61,135.71,157.29,128.74,158.9Z"
+        style="fill: #ff6e31; transform-origin: 126.712px 173.703px"
+        id="eljswspibxev"
+        class="animable"
+      ></path>
+      <g id="el8uxryh4l57w">
+        <path
+          d="M128.74,158.9c-6.83,1.58-14,20.35-14,20.35l14.19,9.48a110.51,110.51,0,0,0,8.54-15.53C141.22,164.61,135.71,157.29,128.74,158.9Z"
+          style="opacity: 0.7; transform-origin: 126.712px 173.703px"
+          class="animable"
+          id="elc5772dco0s5"
+        ></path>
+      </g>
+      <path
+        d="M134.13,170.87l-5.87,17.41.67.45s2.68-4,5.53-9.33Z"
+        style="fill: #ff6e31; transform-origin: 131.36px 179.8px"
+        id="elo6psyxkt1y"
+        class="animable"
+      ></path>
+      <g id="elurfy8pt63in">
+        <path
+          d="M134.13,170.87l-5.87,17.41.67.45s2.68-4,5.53-9.33Z"
+          style="opacity: 0.8; transform-origin: 131.36px 179.8px"
+          class="animable"
+          id="elf0e5i3cgils"
+        ></path>
+      </g>
+      <path
+        d="M174.57,191.72c-.06,8.2-.55,18.4-1.77,31.06H133.5c-.51-6,2.15-35.46-4.76-63.88a101.07,101.07,0,0,1,13.09-1.66,145.28,145.28,0,0,1,16.7,0,74.84,74.84,0,0,1,11.37,2s3.36,3.64,4.38,20.71C174.48,183.36,174.59,187.24,174.57,191.72Z"
+        style="fill: #ff6e31; transform-origin: 151.656px 189.89px"
+        id="elaanpugtmtza"
+        class="animable"
+      ></path>
+      <g id="el8tlql3dw0ii">
+        <path
+          d="M174.57,191.72c-.06,8.2-.55,18.4-1.77,31.06H133.5c-.51-6,2.15-35.46-4.76-63.88a101.07,101.07,0,0,1,13.09-1.66,145.28,145.28,0,0,1,16.7,0,74.84,74.84,0,0,1,11.37,2s3.36,3.64,4.38,20.71C174.48,183.36,174.59,187.24,174.57,191.72Z"
+          style="opacity: 0.7; transform-origin: 151.656px 189.89px"
+          class="animable"
+          id="elcvz2a8vkw1"
+        ></path>
+      </g>
+      <path
+        d="M174.57,191.72c-2.38-4.34-6.7-13.05-6.09-18l5.8,6.28C174.48,183.36,174.59,187.24,174.57,191.72Z"
+        style="fill: #ff6e31; transform-origin: 171.497px 182.72px"
+        id="elzq3c0x2e74"
+        class="animable"
+      ></path>
+      <g id="elodq1vnqlqd">
+        <path
+          d="M174.57,191.72c-2.38-4.34-6.7-13.05-6.09-18l5.8,6.28C174.48,183.36,174.59,187.24,174.57,191.72Z"
+          style="opacity: 0.8; transform-origin: 171.497px 182.72px"
+          class="animable"
+          id="elpzbiow50cd9"
+        ></path>
+      </g>
+      <path
+        d="M162.2,165.92c-.62,7,15.25,23.84,15.25,23.84l12.72-10.36a82,82,0,0,0-11.89-15.5C170.84,156.71,162.9,158.08,162.2,165.92Z"
+        style="fill: #ff6e31; transform-origin: 176.176px 174.481px"
+        id="elfwvmf3jrqye"
+        class="animable"
+      ></path>
+      <g id="el6c4bmyzn57j">
+        <path
+          d="M162.2,165.92c-.62,7,15.25,23.84,15.25,23.84l12.72-10.36a82,82,0,0,0-11.89-15.5C170.84,156.71,162.9,158.08,162.2,165.92Z"
+          style="opacity: 0.7; transform-origin: 176.176px 174.481px"
+          class="animable"
+          id="eletwkxjwfdz"
+        ></path>
+      </g>
+      <polygon
+        points="168.23 392.64 168.19 401.4 160.85 401.4 160.88 392.64 168.23 392.64"
+        style="fill: rgb(206, 111, 100); transform-origin: 164.54px 397.02px"
+        id="el6yrr1ls6krh"
+        class="animable"
+      ></polygon>
+      <polygon
+        points="119.74 392.64 127.09 392.64 125.52 401.4 118.17 401.4 119.74 392.64"
+        style="fill: rgb(206, 111, 100); transform-origin: 122.63px 397.02px"
+        id="el8bfdb84bob7"
+        class="animable"
+      ></polygon>
+      <path
+        d="M145,130.15c-1.07,7.24-2.06,11.4.72,16a9.49,9.49,0,0,0,16.79-.89c2.87-6,4.15-16.84-2.16-21.42A9.58,9.58,0,0,0,145,130.15Z"
+        style="fill: rgb(228, 137, 123); transform-origin: 154.397px 136.32px"
+        id="el0qez0wi830pk"
+        class="animable"
+      ></path>
+      <path
+        d="M166.75,126.72a18.26,18.26,0,0,1-7,2.15c-1.83,8.37-6.7,18-14.58,15.23-3-1-6-8.27-6.31-14.72-.52.63-.87,1.45-1.14,1.79a16.28,16.28,0,0,1,.94-8.5c2.18-6.18,3.63-2.08,6-5.83,1.53-2.48,4.25-3.76,9-3.92-1.33.69-1.58,1.8.39,1.64s10.38-.62,15.28,2.69c-3.31.75-1.29,6,3.13,3.2C170.85,123.06,168.85,125.54,166.75,126.72Z"
+        style="fill: rgb(38, 50, 56); transform-origin: 154.992px 128.753px"
+        id="el5xs73x0spt5"
+        class="animable"
+      ></path>
+      <path
+        d="M154.09,134.63a8.62,8.62,0,0,0,1.76,5.09c1.49,1.92,3.2,1,3.61-1.16.36-1.92,0-5.24-1.86-6.4S154.08,132.43,154.09,134.63Z"
+        style="fill: rgb(228, 137, 123); transform-origin: 156.837px 136.257px"
+        id="elwosfi3o5kx8"
+        class="animable"
+      ></path>
+      <path
+        d="M145.13,117.62a6.13,6.13,0,0,1-4.89-3S140.11,120.48,145.13,117.62Z"
+        style="fill: rgb(30, 42, 76); transform-origin: 142.685px 116.513px"
+        id="elmrs2dfe3ke"
+        class="animable"
+      ></path>
+      <path
+        d="M158.85,222.78s-6.16,56.14-9.93,77.17c-4.12,23-20,99.76-20,99.76H115.42S125,324.84,127,302c2.15-24.75,6.54-79.26,6.54-79.26Z"
+        style="fill: #ff6e31; transform-origin: 137.135px 311.225px"
+        id="elufd1mwgr4gp"
+        class="animable"
+      ></path>
+      <g id="el0qxjv4t8jmqf">
+        <path
+          d="M158.85,222.78s-6.16,56.14-9.93,77.17c-4.12,23-20,99.76-20,99.76H115.42S125,324.84,127,302c2.15-24.75,6.54-79.26,6.54-79.26Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.6;
+            transform-origin: 137.135px 311.225px;
+          "
+          class="animable"
+          id="elumchjd8hh29"
+        ></path>
+      </g>
+      <path
+        d="M130.83,394.75c.06,0-1.19,5.17-1.19,5.17H114.51l.1-4.61Z"
+        style="fill: #ff6e31; transform-origin: 122.671px 397.335px"
+        id="el3ubzyl1th6q"
+        class="animable"
+      ></path>
+      <g id="elgqasoifwsrh">
+        <path
+          d="M130.83,394.75c.06,0-1.19,5.17-1.19,5.17H114.51l.1-4.61Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.1;
+            transform-origin: 122.671px 397.335px;
+          "
+          class="animable"
+          id="elwit19pcbxn"
+        ></path>
+      </g>
+      <path
+        d="M154.36,242.78c-9.57,1.89-7.16,37.84-5.29,56.33,2.28-13.07,5.38-38.22,7.47-56.07A3.34,3.34,0,0,0,154.36,242.78Z"
+        style="fill: #ff6e31; transform-origin: 151.947px 270.906px"
+        id="eljx5rguvi6wb"
+        class="animable"
+      ></path>
+      <g id="elvni6v8n40r">
+        <path
+          d="M154.36,242.78c-9.57,1.89-7.16,37.84-5.29,56.33,2.28-13.07,5.38-38.22,7.47-56.07A3.34,3.34,0,0,0,154.36,242.78Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.4;
+            transform-origin: 151.947px 270.906px;
+          "
+          class="animable"
+          id="elidsxbnxrhx8"
+        ></path>
+      </g>
+      <path
+        d="M172.79,222.78s3.14,54.92,3.2,77.33c.07,23.3-5.12,99.6-5.12,99.6H158.42s-3.35-74.94-4.79-97.82c-1.56-24.95-6.67-79.11-6.67-79.11Z"
+        style="fill: #ff6e31; transform-origin: 161.475px 311.245px"
+        id="ely6c150g61pm"
+        class="animable"
+      ></path>
+      <g id="ela9dcl9qe01s">
+        <path
+          d="M172.79,222.78s3.14,54.92,3.2,77.33c.07,23.3-5.12,99.6-5.12,99.6H158.42s-3.35-74.94-4.79-97.82c-1.56-24.95-6.67-79.11-6.67-79.11Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.6;
+            transform-origin: 161.475px 311.245px;
+          "
+          class="animable"
+          id="elhl3ju5pvuh9"
+        ></path>
+      </g>
+      <path
+        d="M175.8,215.72l-3.49.28a1.92,1.92,0,0,0-1.68,2.46l1.44,4.85a2.56,2.56,0,0,0,4,1.28,13.09,13.09,0,0,0,3.73-6.21Z"
+        style="fill: rgb(228, 137, 123); transform-origin: 175.175px 220.418px"
+        id="elgdc0lw57rtm"
+        class="animable"
+      ></path>
+      <path
+        d="M167.92,390.77h0a.14.14,0,0,1-.12-.14c1.38-21.11,4.58-72.2,4.52-90.52,0-18.75-2.28-60.69-3-73.1a.12.12,0,0,1,.12-.13.13.13,0,0,1,.13.12c.68,12.41,2.91,54.35,3,73.11.06,18.33-3.14,69.42-4.52,90.54A.12.12,0,0,1,167.92,390.77Z"
+        style="fill: #ff6e31; transform-origin: 170.185px 308.825px"
+        id="elnxdz7nu3ukb"
+        class="animable"
+      ></path>
+      <g id="el07o06p2ucpm7">
+        <path
+          d="M167.92,390.77h0a.14.14,0,0,1-.12-.14c1.38-21.11,4.58-72.2,4.52-90.52,0-18.75-2.28-60.69-3-73.1a.12.12,0,0,1,.12-.13.13.13,0,0,1,.13.12c.68,12.41,2.91,54.35,3,73.11.06,18.33-3.14,69.42-4.52,90.54A.12.12,0,0,1,167.92,390.77Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.3;
+            transform-origin: 170.185px 308.825px;
+          "
+          class="animable"
+          id="ele1h5laqcks"
+        ></path>
+      </g>
+      <path
+        d="M173.07,394.75c.06,0-.5,5.17-.5,5.17H157.43l-.59-4.61Z"
+        style="fill: #ff6e31; transform-origin: 164.957px 397.335px"
+        id="elos7je0my9cq"
+        class="animable"
+      ></path>
+      <g id="el1wzczaf7486">
+        <path
+          d="M173.07,394.75c.06,0-.5,5.17-.5,5.17H157.43l-.59-4.61Z"
+          style="
+            fill: rgb(250, 250, 250);
+            opacity: 0.1;
+            transform-origin: 164.957px 397.335px;
+          "
+          class="animable"
+          id="el0v6ilimgrkpg"
+        ></path>
+      </g>
+    </g>
+    <defs>
+      <filter id="active" height="200%">
+        <feMorphology
+          in="SourceAlpha"
+          result="DILATED"
+          operator="dilate"
+          radius="2"
+        ></feMorphology>
+        <feFlood
+          flood-color="#32DFEC"
+          flood-opacity="1"
+          result="PINK"
+        ></feFlood>
+        <feComposite
+          in="PINK"
+          in2="DILATED"
+          operator="in"
+          result="OUTLINE"
+        ></feComposite>
+        <feMerge>
+          <feMergeNode in="OUTLINE"></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <filter id="hover" height="200%">
+        <feMorphology
+          in="SourceAlpha"
+          result="DILATED"
+          operator="dilate"
+          radius="2"
+        ></feMorphology>
+        <feFlood
+          flood-color="#ff0000"
+          flood-opacity="0.5"
+          result="PINK"
+        ></feFlood>
+        <feComposite
+          in="PINK"
+          in2="DILATED"
+          operator="in"
+          result="OUTLINE"
+        ></feComposite>
+        <feMerge>
+          <feMergeNode in="OUTLINE"></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+        <feColorMatrix
+          type="matrix"
+          values="0   0   0   0   0                0   1   0   0   0                0   0   0   0   0                0   0   0   1   0 "
+        ></feColorMatrix>
+      </filter>
+    </defs>
+  </svg>
+</div>
+
+<div *ngIf="isFormEnable == true">
+  <mat-grid-list cols="1" rowHeight="100%">
+    <mat-card style="margin-top: 1rem; box-shadow: none; border: none;max-height: 600px;">
+      <p style="font-weight: bold; font-size: 12px; text-align: center">
+        اطلاعات شخصی
+      </p>
+      <div autocomplete="off">
+        <div style="width: 100%">
+          <mat-form-field class="full-width-1 form">
+            <input
+              matInput
+              [(ngModel)]="usersAnswers.firstName"
+              placeholder="نام (اختیاری)"
+              maxlength="100"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width- form">
+            <input
+              matInput
+              [(ngModel)]="usersAnswers.lastName"
+              placeholder="نام خانوادگی (اختیاری)"
+              maxlength="100"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width-1 form">
+            <input
+              matInput
+              [(ngModel)]="usersAnswers.email"
+              placeholder="ایمیل (اختیاری)"
+              maxlength="100"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width-1 form">
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="usersAnswers.phone"
+              placeholder="شماره تلفن (اختیاری)"
+              maxlength="11"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card>
+
+    <div style="padding-bottom: 1rem">
+      <h1
+        style="
+          font-size: 18px;
+          color: #000080;
+          text-align: center;
+          padding-top: 2rem;
+          font-weight: bold;
+        "
+      >
+        {{ formView.title }}
+      </h1>
+    </div>
+
+    <div class="survey-options">
+      <ol class="list-style">
+        <li
+          *ngFor="let item1 of counter(formView.question.length); let i = index"
+        >
+          <div [ngSwitch]="formView.question[i].Type">
+            <div *ngSwitchCase="'Text'">
+              <mat-card class="card">
+                <p style="border: none; font-weight: bold">
+                  {{ formView.question[i].Title }}
+                </p>
+                <textarea
+                  required="true"
+                  style="font-size: 12px; width: 270px; padding: 0.5rem"
+                  placeholder="متن خود را در این مکان بنویسید"
+                  [(ngModel)]="formView.question[i].selectedAnswers"
+                ></textarea>
+              </mat-card>
+            </div>
+
+            <div *ngSwitchCase="'Radio Button'">
+              <mat-card class="card">
+                <p style="border: none; font-weight: bold">
+                  {{ formView.question[i].Title }}
+                </p>
+                <mat-radio-group
+                  required="true"
+                  class="example-radio-group"
+                  [(ngModel)]="formView.question[i].selectedAnswers"
+                >
+                  <mat-radio-button
+                    style="padding-bottom: 0.5rem"
+                    *ngFor="
+                      let item2 of counter(formView.question[i].Answers.length);
+                      let j = index
+                    "
+                    [value]="formView.question[i].Answers[j].optionText"
+                  >
+                    <span style="padding-right: 0.5rem">{{
+                      formView.question[i].Answers[j].optionText
+                    }}</span>
+                  </mat-radio-button>
+                </mat-radio-group>
+              </mat-card>
+            </div>
+
+            <div *ngSwitchCase="'Check Box'">
+              <mat-card class="card">
+                <p style="border: none; font-weight: bold">
+                  {{ formView.question[i].Title }}
+                </p>
+                <ul
+                  style="list-style: none; padding-right: 0px"
+                  *ngFor="
+                    let item3 of counter(formView.question[i].Answers.length);
+                    let k = index
+                  "
+                >
+                  <mat-checkbox
+                    required="true"
+                    color="primary"
+                    class="example-margin"
+                    style="font-size: 12px; padding-bottom: 0.2rem"
+                    (change)="
+                      formView.question[i].selectedAnswers.push(
+                        formView.question[i].Answers[k].optionText
+                      )
+                    "
+                    [value]="formView.question[i].Answers[k].optionText"
+                  >
+                    <span
+                      style="
+                        padding-right: 0.5rem;
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: clip;
+                        white-space: break-spaces;
+                        overflow: hidden;
+                      "
+                    >
+                      {{ formView.question[i].Answers[k].optionText }}
+                    </span>
+                  </mat-checkbox>
+                </ul>
+              </mat-card>
+            </div>
+
+            <div *ngSwitchCase="'Calendar'">
+              <mat-card class="card">
+                <p style="border: none; font-weight: bold">
+                  {{ formView.question[i].Title }}
+                </p>
+                <div *ngSwitchCase="'Calendar'">
+                  <ng-persian-datepicker (dateOnSelect)="onSelectDate($event, formView.question[i].selectedAnswers)">
+                    <input
+                      style="
+                        padding: 1rem;
+                        padding-right: 1.3rem;
+                        width: 90%;
+                        height: 35px;
+                        border-radius: 5px;
+                      "
+                      placeholder={{dateSelected}}
+                      [(ngModel)]="formView.question[i].selectedAnswers"
+                    />
+                  </ng-persian-datepicker>
+                </div>
+              </mat-card>
+            </div>
+
+            <div *ngSwitchCase="'File'">
+              <mat-card class="card">
+                <p style="border: none; font-weight: bold">
+                  {{ formView.question[i].Title }}
+                </p>
+                <button
+                  class="btn"
+                  style="font-size: 12px; background-color: gray"
+                  disabled
+                >
+                  آپلود فایل
+                </button>
+              </mat-card>
+            </div>
+          </div>
+          <span
+            *ngIf="i != formView.question.length - 1"
+            style="margin-right: 1rem"
+            >--------------------------------</span
+          >
+        </li>
+      </ol>
+    </div>
+    <div style="padding-top: 1rem" class="button-row">
+      <button
+        style="
+          width: 90%;
+          border-radius: 5px;
+          margin-bottom: 2rem;
+          background-color: #000080;
+          color: white;
+          margin-right: 1rem;
+        "
+        class="btn"
+        type="submit"
+        (click)="onSubmit()"
+        mat-raised-button
+        [disabled]="!formView"
+      >
+        <span>ثبت</span>
+      </button>
+    </div>
+  </mat-grid-list>
+</div>
+</div>
+
+<div *ngIf="hasToken == true">
+  <app-headermenu></app-headermenu>
+  <div *ngIf="formView">
+    <mat-grid-list cols="1" rowHeight="100%">
+      <mat-card style="margin-top: 1rem; box-shadow: none; border: none">
+        <p style="font-weight: bold; font-size: 12px; text-align: center">
+          اطلاعات شخصی
+        </p>
+        <div autocomplete="off">
+          <div style="width: 80%;margin-right: 2.2rem;">
+            <mat-form-field class="full-width-1 form" >
+              <input
+                matInput
+                [(ngModel)]="usersAnswers.firstName"
+                placeholder="نام (اختیاری)"
+                maxlength="100"
+              />
+            </mat-form-field>
+            <mat-form-field class="full-width-1 form">
+              <input
+                matInput
+                [(ngModel)]="usersAnswers.lastName"
+                placeholder="نام خانوادگی (اختیاری)"
+                maxlength="100"
+              />
+            </mat-form-field>
+            <mat-form-field class="full-width-1 form">
+              <input
+                matInput
+                [(ngModel)]="usersAnswers.email"
+                placeholder="ایمیل (اختیاری)"
+                maxlength="100"
+              />
+            </mat-form-field>
+            <mat-form-field class="full-width-1 form">
+              <input
+                matInput
+                type="number"
+                [(ngModel)]="usersAnswers.phone"
+                placeholder="شماره تلفن (اختیاری)"
+                maxlength="11"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card>
+
+      <div style="padding-bottom: 1rem">
+        <h1
+          style="
+            font-size: 18px;
+            color: #000080;
+            text-align: center;
+            padding-top: 2rem;
+            font-weight: bold;
+          "
+        >
+          {{ formView.title }}
+        </h1>
+      </div>
+
+      <div class="survey-options">
+        <ol class="list-style">
+          <li
+            *ngFor="let item1 of counter(formView.question.length) let i = index"
+          >
+            <div [ngSwitch]="formView.question[i].Type">
+              <div *ngSwitchCase="'Text'">
+                <mat-card class="card">
+                  <p style="border: none; font-weight: bold;margin-bottom: 1.5rem;">
+                    {{ formView.question[i].Title }}
+                  </p>
+                  <textarea
+                    required="true"
+                    style="font-size: 12px; width: 270px; padding: 0.5rem"
+                    placeholder="متن خود را در این مکان بنویسید"
+                    [(ngModel)]="formView.question[i].selectedAnswers"
+                  ></textarea>
+                </mat-card>
+              </div>
+
+              <div *ngSwitchCase="'Radio Button'">
+                <mat-card class="card">
+                  <p style="border: none; font-weight: bold;margin-bottom: 1.5rem;">
+                    {{ formView.question[i].Title }}
+                  </p>
+                  <mat-radio-group
+                    required="true"
+                    class="example-radio-group"
+                    [(ngModel)]="formView.question[i].selectedAnswers"
+                  >
+                    <mat-radio-button
+                      style="padding-bottom: 0.5rem"
+                      *ngFor="
+                        let item2 of counter(formView.question[i].Answers.length);
+                        let j = index
+                      "
+                      [value]="formView.question[i].Answers[j].optionText"
+                    >
+                      <span style="padding-right: 0.5rem">{{
+                        formView.question[i].Answers[j].optionText
+                      }}</span>
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </mat-card>
+              </div>
+
+              <div *ngSwitchCase="'Check Box'">
+                <mat-card class="card">
+                  <p style="border: none; font-weight: bold;margin-bottom: 1.5rem;">
+                    {{ formView.question[i].Title }}
+                  </p>
+                  <ul
+                    style="list-style: none; padding-right: 0px"
+                    *ngFor="
+                      let item3 of counter(formView.question[i].Answers.length);
+                      let k = index
+                    "
+                  >
+                    <mat-checkbox
+                      required="true"
+                      color="primary"
+                      class="example-margin"
+                      style="font-size: 12px; padding-bottom: 0.2rem"
+                      (change)="
+                        formView.question[i].selectedAnswers.push(
+                          formView.question[i].Answers[k].optionText
+                        )
+                      "
+                      [value]="formView.question[i].Answers[k].optionText"
+                    >
+                      <span
+                        style="
+                          padding-right: 0.5rem;
+                          display: block;
+                          overflow: hidden;
+                          text-overflow: clip;
+                          white-space: break-spaces;
+                          overflow: hidden;
+                        "
+                      >
+                        {{ formView.question[i].Answers[k].optionText }}
+                      </span>
+                    </mat-checkbox>
+                  </ul>
+                </mat-card>
+              </div>
+
+              <div *ngSwitchCase="'Calendar'">
+                <mat-card class="card">
+                  <p style="border: none; font-weight: bold;margin-bottom: 1.5rem;">
+                    {{ formView.question[i].Title }}
+                  </p>
+                  <div *ngSwitchCase="'Calendar'">
+                    <ng-persian-datepicker dateFormat="YYYY-MM-DD HH:mm:ss">
+                      <input
+                        style="
+                          padding: 1rem;
+                          padding-right: 1.3rem;
+                          width: 90%;
+                          height: 35px;
+                          border-radius: 5px;
+                        "
+
+                        [(ngModel)]="formView.question[i].selectedAnswers"
+                      />
+                    </ng-persian-datepicker>
+                  </div>
+                </mat-card>
+              </div>
+
+              <div *ngSwitchCase="'File'">
+                <mat-card class="card">
+                  <p style="border: none; font-weight: bold;margin-bottom: 1.5rem;">
+                    {{ formView.question[i].Title }}
+                  </p>
+                  <button
+                    class="btn"
+                    style="font-size: 12px; background-color: gray;width: 270px;"
+                    disabled
+                  >
+                    آپلود فایل
+                  </button>
+                </mat-card>
+              </div>
+            </div>
+            <span
+              *ngIf="i != formView.question.length - 1"
+              style="margin-right: 1rem"
+              >--------------------------------</span
+            >
+          </li>
+        </ol>
+      </div>
+      <div style="padding-top: 1rem" class="button-row">
+        <button
+          style="
+            width: 90%;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            background-color: #000080;
+            color: white;
+            margin-right: 1rem;
+          "
+          class="btn"
+          type="submit"
+          (click)="onSubmit()"
+          mat-raised-button
+        >
+          <span>ثبت</span>
+        </button>
+      </div>
+    </mat-grid-list>
+  </div>
+  </div>

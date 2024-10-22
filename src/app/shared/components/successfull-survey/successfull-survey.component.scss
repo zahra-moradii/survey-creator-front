@@ -1,0 +1,42 @@
+.card {
+  background-color: transparent;
+  border-radius: 4px;
+  margin-top: 2rem;
+  border: none;
+  box-shadow: none;
+}
+.p {
+  color: white;
+  text-align: center;
+}
+.div {
+  text-align: center;
+  padding-top: 1rem;
+}
+.button {
+  width: 250px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: rgb(231, 231, 231);
+}
+mat-toolbar {
+  height: 100% !important;
+}
+
+.content-container {
+  height: calc( 100% - 50px);
+  overflow: auto;
+  padding: 10px;
+  word-break: break-all;
+}
+
+.app-container .content-container {
+  height: calc( 100% - 50px);
+  overflow: auto;
+  padding: 10px;
+  word-break: break-all;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

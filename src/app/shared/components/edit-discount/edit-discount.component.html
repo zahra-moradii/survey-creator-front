@@ -1,0 +1,188 @@
+<mat-grid-list cols="1">
+  <mat-card>
+    <mat-card-header>
+      <mat-icon class="icon">add</mat-icon>
+      <p class="header">ایجاد تخفیف جدید</p>
+    </mat-card-header>
+    <mat-divider class="devider"></mat-divider>
+    <mat-card class="card">
+      <form [formGroup]="form" autocomplete="off">
+        <mat-form-field>
+          <input
+            #event
+            (keyup)="keyup1(event.value)"
+            matInput
+            placeholder="افزودن رویداد جدید"
+            maxlength="100"
+            [required]="true"
+          />
+        </mat-form-field>
+        <div *ngIf="errorMessage1 != null">
+          {{ errorMessage1 }}
+        </div>
+        <div style="padding-top: 1rem; text-align: left" class="button-row">
+          <button
+            style="border-radius: 16px"
+            class="btn"
+            (click)="onSubmit1()"
+            mat-raised-button
+          >
+            <span>افزودن رویداد</span>
+          </button>
+        </div>
+
+        <mat-form-field>
+          <input
+            #dType
+            (keyup)="keyup2(dType.value)"
+            matInput
+            placeholder="افزودن نوع تخفیف جدید"
+            maxlength="100"
+            [required]="true"
+          />
+        </mat-form-field>
+        <div *ngIf="errorMessage2 != null">
+          {{ errorMessage2 }}
+        </div>
+
+        <div style="padding-top: 1rem; text-align: left" class="button-row">
+          <button
+            style="border-radius: 16px"
+            class="btn"
+            (click)="onSubmit2()"
+            mat-raised-button
+          >
+            <span>افزودن نوع تخفیف</span>
+          </button>
+        </div>
+
+        <mat-form-field>
+          <mat-label>انتخاب نام رویداد</mat-label>
+          <mat-select
+            [(value)]="eventSelected"
+            name="events"
+            [required]="true"
+            (selectionChange)="eventsChange($event.value)"
+          >
+            <mat-option *ngFor="let e of events" [value]="e.name">
+              {{ e.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>انتخاب نوع تخفیف</mat-label>
+          <mat-select
+            [(value)]="dTypeSelected"
+            name="dType"
+            [required]="true"
+            (selectionChange)="dTypeChange($event.value)"
+          >
+            <mat-option *ngFor="let d of dTypes" [value]="d.name">
+              {{ d.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>انتخاب پکیج</mat-label>
+          <mat-select
+            name="package"
+            [required]="true"
+            (selectionChange)="packageChange($event.value)"
+            [(value)]="packageSelectedId"
+          >
+            <mat-option
+              *ngFor="let p of packagePrices; let i = index"
+              [value]="p._id"
+            >
+              {{ packageNames[i] }}
+              {{ p.duration }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+        <!-- <div class="container" style="margin-top: 1rem">
+          <div>
+            <mat-form-field appearance="fill" style="text-align: right">
+              <mat-label>بازه تاریخی را وارد نمایید</mat-label>
+              <mat-date-range-input [rangePicker]="picker" [min]="minDate">
+                <input
+                  matStartDate
+                  placeholder="روز شروع"
+                  formControlName="start"
+                />
+                <input
+                  matEndDate
+                  placeholder="روز پایان"
+                  formControlName="end"
+                />
+              </mat-date-range-input>
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-date-range-picker
+                style="text-align: right"
+                #picker
+              ></mat-date-range-picker>
+              <mat-error>لطفا یک بازه تاریخی را انتخاب کنید</mat-error>
+            </mat-form-field>
+          </div>
+        </div> -->
+
+        <div>
+          <ng-persian-datepicker (dateOnSelect)="onSelectStartDate($event)">
+            <p>تاریخ شروع : {{sd}}</p>
+          <input style="padding: 1rem;padding-right: 1.3rem;width: 100%;height: 35px;border-style: solid;border-color: rgb(223 223 223);border-radius: 5px;"
+           formControlName="start"
+           placeholder="تغییر تاریخ شروع"
+          />
+        </ng-persian-datepicker>
+
+        <ng-persian-datepicker (dateOnSelect)="onSelectEndDate($event)">
+          <p>تاریخ پابان : {{ed}}</p>
+        <input style="padding: 1rem;padding-right: 1.3rem;width: 100%;height: 35px;border-style: solid;border-color: rgb(223 223 223);border-radius: 5px;"
+        formControlName="end"
+         placeholder="تغییر تاریخ پایان"
+        />
+      </ng-persian-datepicker>
+      </div>
+      
+        <mat-form-field>
+          <input
+            type="number"
+            formControlName="userCounts"
+            matInput
+            placeholder="تعداد کاربران "
+            [required]="true"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="number"
+            formControlName="percentage"
+            matInput
+            placeholder="درصد تخفیف"
+            [required]="true"
+          />
+        </mat-form-field>
+
+        <div style="padding-top: 1rem" class="button-row">
+          <button
+            style="width: 100%; border-radius: 16px"
+            class="btn btn-success"
+            type="submit"
+            (click)="onSubmit3()"
+            mat-raised-button
+            [disabled]="!form.valid"
+          >
+            <span>ایجاد پکیج</span>
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </mat-card>
+</mat-grid-list>

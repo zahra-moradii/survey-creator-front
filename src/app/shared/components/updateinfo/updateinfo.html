@@ -1,0 +1,198 @@
+<app-headermenu></app-headermenu>
+
+<mat-card style="background-color: transparent; border: none; box-shadow: none">
+  <mat-tab-group
+    dynamicHeight
+    mat-align-tabs="center"
+    animationDuration="1000ms"
+    class="custom-tab f-vasir"
+  >
+    <mat-tab label="ویرایش اطلاعات">
+      <div class="lll">
+        <div class="example-large-box r" id="signup" style="box-shadow: none">
+          <div>
+            <div class="">
+              <div *ngIf="!checkUser()">
+                <div class="">
+                  <div class="example-container">
+                    <mat-form-field appearance="legacy">
+                      <mat-label class="f-vasir">نام</mat-label>
+                      <input
+                        matInput
+                        [(ngModel)]="firstname"
+                        name="firstname"
+                      />
+                    </mat-form-field>
+                  </div>
+                </div>
+                <!-- <h2>{{set()}}</h2> -->
+                <br />
+                <div class="">
+                  <div class="example-container">
+                    <mat-form-field appearance="legacy">
+                      <mat-label class="f-vasir">نام خانوادگی</mat-label>
+                      <input matInput name="lastname" [(ngModel)]="lastname" />
+                    </mat-form-field>
+                  </div>
+                </div>
+                <br />
+              </div>
+              <div class="" *ngIf="checkUser()">
+                <div class="example-container">
+                  <mat-form-field appearance="legacy">
+                    <mat-label class="f-vasir">نام شرکت</mat-label>
+                    <input
+                      matInput
+                      name="companyname"
+                      [(ngModel)]="companyname"
+                    />
+                  </mat-form-field>
+                </div>
+              </div>
+              <br />
+              <div class="">
+                <div class="example-container">
+                  <mat-form-field appearance="legacy" hideRequiredMarker>
+                    <mat-label class="f-vasir">نام کاربری</mat-label>
+                    <input matInput disabled value="{{username}}" />
+                  </mat-form-field>
+                </div>
+              </div>
+              <br />
+              <div>
+                <form class="example-form">
+                  <mat-form-field
+                    class="example-full-width"
+                    appearance="legacy"
+                    hideRequiredMarker
+                  >
+                    <mat-label class="f-vasir">تلفن</mat-label>
+                    <input
+                      type="tel"
+                      matInput
+                      placeholder="0912-345-6789"
+                      maxlength="11"
+                      (keypress)="numberOnly($event)"
+                      [formControl]="phone"
+                      required
+                      name="phone"
+                      [(ngModel)]="phone_ch"
+                    />
+                    <mat-error *ngIf="phone.invalid"
+                      >{{getErrorMessage_phone()}}</mat-error
+                    >
+                  </mat-form-field>
+                </form>
+              </div>
+              <br />
+              <div class="d-flex align-items-center justify-content-center">
+                <button
+                  type="submit"
+                  class="btn btn-p mt-2 f-vasir sh-l"
+                  style="
+                    background-color: #000080;
+                    border-radius: 5px;
+                    color: white;
+                    width: 270px;
+                  "
+                  (click)="updateUser()"
+                >
+                  ثبت تغییرات
+                </button>
+                <br /><br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="ویرایش رمز عبور">
+      <div class="lll">
+        <div class="example-small-box r" id="login" style="box-shadow: none">
+          <form [formGroup]="registerForm">
+            <div class="d-c">
+              <div class="">
+                <div class="example-container">
+                  <mat-form-field appearance="legacy" hideRequiredMarker>
+                    <mat-label class="">رمز ورود جدید</mat-label>
+                    <input
+                      matInput
+                      formControlName="password"
+                      name="password"
+                      type="password"
+                      required
+                      [(ngModel)]="pass"
+                    />
+                    <mat-error *ngIf="registerForm.value.password"
+                      >رمز عبور باید بین 6 تا 10 حرف باشد.</mat-error
+                    >
+                    <button
+                      mat-icon-button
+                      matSuffix
+                      (click)="hide = !hide"
+                      [attr.aria-label]="'Hide password'"
+                      [attr.aria-pressed]="hide"
+                      class="b-v"
+                    >
+                      <mat-icon
+                        >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon
+                      >
+                    </button>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div class="example-container">
+              <mat-form-field appearance="legacy" hideRequiredMarker>
+                <mat-label>تکرار رمز ورود</mat-label>
+                <input
+                  matInput
+                  formControlName="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  required
+                  pattern="{{registerForm.value.password}}"
+                />
+                <mat-error *ngIf="registerForm.value.confirmPassword"
+                  >تکرار رمز عبور اشتباه است</mat-error
+                >
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide"
+                  class="b-v"
+                >
+                  <mat-icon
+                    >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon
+                  >
+                </button>
+              </mat-form-field>
+
+              <br />
+              <div class="d-flex align-items-center justify-content-center">
+                <button
+                  type="submit"
+                  class="btn btn-p mt-2 f-vasir sh-l"
+                  style="
+                    background-color: #000080;
+                    border-radius: 5px;
+                    color: white;
+                    width: 270px;
+                  "
+                  (click)="updatepass()"
+                >
+                  ثبت تغییرات
+                </button>
+                <br /><br />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>

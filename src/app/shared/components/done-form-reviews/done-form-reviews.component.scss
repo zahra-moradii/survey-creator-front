@@ -1,0 +1,14 @@
+.span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  font-size: 14px;
+}
+.card {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.expandable-content {
+  overflow: hidden;
+}

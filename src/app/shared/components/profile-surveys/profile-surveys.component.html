@@ -1,0 +1,214 @@
+<app-headermenu></app-headermenu>
+
+<ol
+style="
+  list-style: none;
+  padding-right: 0px;
+  max-height: 500px;
+  margin-top: 0.5rem;
+"
+>
+<li *ngFor="let survey of allSurveys; let i = index">
+  <mat-accordion class="example-headers-align" multi>
+    <mat-expansion-panel *ngIf="checkStyle(survey)" style="border-radius: 0px;">
+      <mat-expansion-panel-header [ngStyle]="{'border-right-color': brc}" style="border-right-width: 10px;
+      height: 100px;
+      border-right-style:solid;
+      padding-right: 0rem;
+      padding-left: 1.5rem;">
+        <mat-panel-title>
+          <div>
+          <div style="display: flex;">
+            <div *ngIf="onCopyLink(survey.code)">
+            <mat-icon style="margin-left: 0.5rem" [cdkCopyToClipboard]="formShareLink"
+            (click)="this.showSnackbarActionOk2()"
+             >share</mat-icon>
+          </div>
+            <p style="color: #000080; font-weight: bold">
+              {{ survey.title }}
+            </p>
+          </div>
+</div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div style="display: flex">
+        <mat-icon
+                style="
+                      cursor: pointer;
+                "
+                [cdkCopyToClipboard]="survey.code"
+                (click)="onCopy()"
+              >
+                file_copy</mat-icon
+              >
+              <p style="margin-top: 0.3rem;
+              font-weight: bold;
+              margin-right: 0.8rem;">
+                {{ survey.code }}
+              </p>
+      </div>
+      <div style="display: flex">
+        <mat-icon
+          >access_time</mat-icon
+        >
+        <p style="margin-right: 0.7rem;">
+                      بازه زمانی :
+                      <strong>{{ survey.startDate | showDate }}</strong> -
+                      <strong>{{ survey.expireDate | showDate }}</strong>
+                    </p>
+                    </div>
+      <div div style="display: flex">
+        <mat-icon
+          *ngIf="
+            (survey.startDate | isFormActive : survey.expireDate) ==
+            'فعال'
+          "
+          class="ml-1"
+          >event_available</mat-icon
+        >
+        <mat-icon
+          *ngIf="
+            (survey.startDate | isFormActive : survey.expireDate) ==
+            'غیرفعال'
+          "
+          class="ml-1"
+          >event_busy</mat-icon
+        >
+        <p style="margin-right: 0.5rem;">
+          وضعیت فرم :
+          <strong>{{
+            survey.startDate | isFormActive : survey.expireDate
+          }}</strong>
+        </p>
+      </div>
+
+      <div div style="display: flex">
+        <mat-icon class="ml-1">bar_chart</mat-icon>
+        <p style="margin-top: 0.2rem;margin-right: 0.5rem;">
+          تعداد پاسخ ها : <strong>{{ survey.answersCount }}</strong>
+        </p>
+      </div>
+
+      <div style="display: flex; margin-top: 1rem; width: 350px">
+        <button
+          style="
+            padding: 0px;
+            background-color: #000080;
+            color: white;
+            width: 180px;
+          "
+          mat-button
+          (click)="onAnswers(survey.code)"
+        >
+          مشاهده پاسخ های کاربران
+        </button>
+        <div>
+          <button
+            style="
+              background-color: transparent;
+              border: none;
+              padding-top: 0.5rem;
+              padding-right: 2rem;
+              box-shadow: none;
+            "
+            (click)="onViewSurvey(survey.code)"
+          >
+            <mat-icon> visibility </mat-icon>
+          </button>
+        </div>
+
+        <div>
+          <button
+            data-toggle="modal"
+            data-target="#exampleModal1"
+            style="
+              background-color: transparent;
+              border: none;
+              padding-top: 0.5rem;
+              padding-right: 1rem;
+              box-shadow: none;
+            "
+            (click)="onEdit(survey)"
+          >
+            <mat-icon> edit </mat-icon>
+          </button>
+        </div>
+
+        <div>
+          <button
+            data-toggle="modal"
+            [attr.data-target]="'#modal' + survey._id"
+            style="
+              background-color: transparent;
+              border: none;
+              padding-top: 0.5rem;
+              padding-right: 1rem;
+              color: #bb3737;
+              box-shadow: none;
+            "
+            (click)="onActiveFormDelete(survey)"
+          >
+            <mat-icon> delete </mat-icon>
+          </button>
+          <div
+            *ngIf="survey.startDate > today || survey.expireDate < today"
+            class="modal fade"
+            id="modal{{ survey._id }}"
+            tabindex="-1"
+            role="dialog"
+            [attr.aria-labelledby]="survey._id + 'Label'"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  {{ survey.title }} <strong>حذف شود ؟</strong>
+                  <p
+                    style="
+                      font-size: 12px;
+                      color: #bb3737;
+                      margin-top: 1rem;
+                    "
+                  >
+                    با حذف فرم نظرسنجی، تمامی پاسخ های مرتبط با این
+                    فرم حذف می‌شوند
+                  </p>
+                </div>
+                <div
+                  style="
+                    align-self: flex-end;
+                    display: flex;
+                    margin-left: 1rem;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  <button
+                    style="width: 100px"
+                    type="button"
+                    class="ml-3 btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    خیر
+                  </button>
+                  <button
+                    (click)="onDelete(survey)"
+                    type="button"
+                    class="btn btn-primary"
+                    style="
+                      background-color: #bb3737;
+                      border-color: #bb3737;
+                      width: 100px;
+                    "
+                  >
+                    بله
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</li>
+</ol>
